@@ -140,7 +140,7 @@ The preferred model must satisfy the prespecified governance rule in the synopsi
 - Large projects can cause legitimate spikes; they should not automatically be deleted as errors.
 - The study is predictive, not causal.
 - The synthetic data under `data/demo/` are only for software testing and must not be used in the final analysis.
-- Before final submission, replace the repository placeholder in the synopsis with the public GitHub URL and commit the processed dataset, data dictionary, source manifest, code, configuration, and generated results.
+- Before final project submission, commit the processed dataset, data dictionary, source manifest, code, configuration, and generated results to <https://github.com/dgupta91114/ontario-building-permit-forecasting>.
 
 ## Reproducibility
 

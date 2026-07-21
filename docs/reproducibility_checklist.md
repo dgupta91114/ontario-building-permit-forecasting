@@ -2,7 +2,7 @@
 
 Before making the repository public, confirm each item.
 
-- [ ] Replace every `REPLACE-WITH-USERNAME` GitHub placeholder.
+- [x] Public GitHub URL recorded: <https://github.com/dgupta91114/ontario-building-permit-forecasting>.
 - [ ] Run `python scripts/00_inspect_sources.py` and review every selected source label.
 - [ ] Freeze the source date range in `config/config.yaml`.
 - [ ] Retain `data/raw/download_manifest.json` with source URLs, timestamps, and SHA-256 hashes.

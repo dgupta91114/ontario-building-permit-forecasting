@@ -1,17 +1,14 @@
 # GitHub Upload Steps
 
-1. Create a new **public** repository named `ontario-building-permit-forecasting` without adding an automatic README or license.
-2. Extract this project folder and open a terminal inside it.
-3. Replace `REPLACE-WITH-USERNAME` in `CITATION.cff` and in the synopsis.
+1. The public repository has been created at <https://github.com/dgupta91114/ontario-building-permit-forecasting>.
+2. Open a terminal inside this project folder.
+3. Confirm the remote with `git remote -v`.
 4. Run:
 
 ```bash
-git init
-git branch -M main
 git add .
-git commit -m "Initialize QM640 capstone repository"
-git remote add origin https://github.com/REPLACE-WITH-USERNAME/ontario-building-permit-forecasting.git
-git push -u origin main
+git commit -m "Update capstone repository"
+git push
 ```
 
 5. After the official data pipeline runs successfully, add the small processed dataset and analysis evidence:
