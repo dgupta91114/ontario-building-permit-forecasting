@@ -1,0 +1,24 @@
+field,source,type_unit,role,definition_treatment
+ref_date,Statistics Canada,date month,key,Forecast-origin reference month converted to first day of month.
+target_date,Derived,date month,key,One calendar month after ref_date.
+cma,Statistics Canada,categorical,key/predictor,"Toronto, Hamilton, Kitchener-Cambridge-Waterloo, London, or Windsor."
+dguid,Statistics Canada,string,audit key,Official geographic identifier retained for reproducibility.
+source_status,Statistics Canada,categorical,quality flag,Published status/symbol field retained and audited.
+permit_value_t,Statistics Canada,continuous $000s,predictor history,"Seasonally adjusted total residential building-permit value at forecast origin t, current dollars."
+permit_value_t_plus_1,Derived,continuous $000s,target,Within-CMA one-month lead of permit value.
+log_target,Derived,continuous,target transform,"log(1 + permit_value_t_plus_1), used internally by fitted models."
+lag_1,Derived,continuous $000s,predictor,Permit value at t-1.
+lag_3,Derived,continuous $000s,predictor,Permit value at t-3.
+lag_6,Derived,continuous $000s,predictor,Permit value at t-6.
+lag_12,Derived,continuous $000s,predictor,Permit value at t-12.
+rolling_mean_3,Derived,continuous $000s,predictor,"Mean of observed permit values at t, t-1, and t-2; excludes target t+1."
+rolling_sd_3,Derived,continuous $000s,predictor,"Sample standard deviation of observed permit values at t, t-1, and t-2."
+seasonal_naive_pred,Derived,continuous $000s,benchmark,Value from same target calendar month one year earlier.
+month_sin,Derived,"continuous [-1,1]",predictor,Sine encoding of target calendar month.
+month_cos,Derived,"continuous [-1,1]",predictor,Cosine encoding of target calendar month.
+time_index,Derived,integer months,predictor,Months elapsed since study start at forecast origin.
+pandemic_indicator,Derived,binary,sensitivity predictor,1 when target date is from 2020-03 through 2021-06; otherwise 0.
+overnight_rate,Bank of Canada,percent,audit/predictor source,Last published V39079 observation in forecast-origin month.
+overnight_rate_lag_1,Derived,percent,primary macro predictor,Previous month's end-of-month target overnight rate.
+ontario_unemployment_rate,Statistics Canada,percent,audit/predictor source,"Seasonally adjusted unemployment rate for Ontario, total gender, age 15+."
+unemployment_lag_1,Derived,percent,primary macro predictor,Previous month's Ontario unemployment rate.

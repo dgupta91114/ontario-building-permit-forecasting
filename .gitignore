@@ -1,0 +1,32 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Reproducible downloads and generated artifacts
+data/raw/
+data/interim/
+data/processed/
+outputs/figures/
+outputs/models/
+
+# Local/editor files
+.env
+.DS_Store
+Thumbs.db
+
+# Local AI assistant / scratch artifacts
+.agents/
+.codex/
+.openai/
+.cursor/
+.windsurf/
+.aider*
+AGENTS.md
+CLAUDE.md
+AI_NOTES.md
+PROMPTS.md
+*.chat.md
+*.prompt.md

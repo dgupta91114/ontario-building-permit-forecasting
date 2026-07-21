@@ -1,0 +1,4 @@
+source_id,agency,dataset_or_series,purpose,landing_page_or_api,access_method,frequency,planned_period,citation_note
+statcan_34100292,Statistics Canada,"Table 34-10-0292-01 — Building permits, by type of structure and type of work",Primary outcome series,https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410029201,Full-table CSV ZIP via WDS,Monthly,2018-01 through 2026-05,Statistics Canada (2026a)
+statcan_14100287,Statistics Canada,"Table 14-10-0287-01 — Labour force characteristics, monthly, seasonally adjusted and trend-cycle",Ontario unemployment predictor,https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410028701,Full-table CSV ZIP via WDS,Monthly,2018-01 through 2026-05,Statistics Canada (2026c)
+boc_V39079,Bank of Canada,V39079 — Target for the overnight rate,Policy-rate predictor,https://www.bankofcanada.ca/valet/observations/V39079/json?start_date=2018-01-01,Valet JSON API,Daily; aggregated monthly,2018-01 through 2026-05,Bank of Canada (n.d.)

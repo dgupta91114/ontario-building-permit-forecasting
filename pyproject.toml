@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ontario-building-permit-forecasting"
+version = "0.1.0"
+description = "Reproducible QM640 capstone pipeline for Ontario residential building-permit forecasting"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Debodip Gupta"}]
+dependencies = [
+  "pandas>=2.1,<3.0",
+  "numpy>=1.26,<3.0",
+  "requests>=2.31,<3.0",
+  "PyYAML>=6.0,<7.0",
+  "scikit-learn>=1.4,<2.0",
+  "statsmodels>=0.14,<1.0",
+  "scipy>=1.11,<2.0",
+  "matplotlib>=3.8,<4.0",
+  "xgboost>=2.0,<4.0",
+  "shap>=0.45,<1.0",
+  "joblib>=1.3,<2.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
