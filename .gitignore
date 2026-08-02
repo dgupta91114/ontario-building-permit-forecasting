@@ -1,21 +1,28 @@
 .venv/
 __pycache__/
 *.py[cod]
+*.egg-info/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 
 # Reproducible downloads and generated artifacts
-data/raw/
-data/interim/
-data/processed/
-outputs/figures/
-outputs/models/
+/data/raw/*
+!/data/raw/.gitkeep
+/data/interim/*
+!/data/interim/.gitkeep
+/outputs/models/*
+!/outputs/models/.gitkeep
 
 # Local/editor files
 .env
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+.ipynb_checkpoints/
+*.tmp
+*.log
 
 # Local AI assistant / scratch artifacts
 .agents/

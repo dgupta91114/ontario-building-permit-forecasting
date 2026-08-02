@@ -1,0 +1,13 @@
+{
+  "selected_model": "xgboost",
+  "rule_outcome": "candidate accepted",
+  "pooled_mase": 0.6507804851827798,
+  "pooled_mae": 13975.867195968225,
+  "naive_mae": 17944.437217229217,
+  "materially_worse_cmas": 0,
+  "rejected_candidates": [],
+  "conformal_radius": 30795.281627452525,
+  "holdout_interval_coverage": 0.8666666666666667,
+  "train_target_months": 76,
+  "holdout_target_months": 12
+}

@@ -1,3 +1,5 @@
+> **Interim evidence notice:** The current numerical outputs were generated from a schema-conformant synthetic dry-run dataset to validate the software and research workflow. They are not empirical findings about Ontario building permits. See `docs/interim_status.md` and `reports/interim/`.
+
 # Forecasting Ontario Residential Building-Permit Values
 
 This repository supports the QM640 Data Analytics Capstone synopsis:

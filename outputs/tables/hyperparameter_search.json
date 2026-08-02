@@ -1,0 +1,39 @@
+{
+  "elastic_net_history": {
+    "best_params": {
+      "regressor__model__alpha": 0.1,
+      "regressor__model__l1_ratio": 0.5
+    },
+    "best_cv_mae": 18953.91502351096,
+    "cv_splits": 3
+  },
+  "elastic_net_macro": {
+    "best_params": {
+      "regressor__model__alpha": 0.1,
+      "regressor__model__l1_ratio": 0.5
+    },
+    "best_cv_mae": 18953.91502351096,
+    "cv_splits": 3
+  },
+  "random_forest": {
+    "best_params": {
+      "regressor__model__max_depth": null,
+      "regressor__model__max_features": 0.7,
+      "regressor__model__min_samples_leaf": 2,
+      "regressor__model__n_estimators": 150
+    },
+    "best_cv_mae": 16582.67849964443,
+    "cv_splits": 3
+  },
+  "xgboost": {
+    "best_params": {
+      "regressor__model__colsample_bytree": 0.8,
+      "regressor__model__learning_rate": 0.05,
+      "regressor__model__max_depth": 3,
+      "regressor__model__n_estimators": 200,
+      "regressor__model__subsample": 0.8
+    },
+    "best_cv_mae": 16018.531890007565,
+    "cv_splits": 3
+  }
+}
