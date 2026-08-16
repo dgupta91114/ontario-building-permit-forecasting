@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import pandas as pd
 
 from capstone.cleaning import clean_all
@@ -14,10 +15,18 @@ from capstone.training import train_and_evaluate
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Run the complete official-data capstone pipeline.")
+    parser.add_argument(
+        "--skip-download",
+        action="store_true",
+        help="Reuse the frozen raw-data manifest and local official source files.",
+    )
+    args = parser.parse_args()
     root = project_root()
     cfg = load_config()
     ensure_project_directories(root)
-    download_all(cfg, root)
+    if not args.skip_download:
+        download_all(cfg, root)
     clean_all(cfg, root)
     dataset_path = build_dataset_from_interim(cfg, root)
     data = pd.read_csv(dataset_path, parse_dates=["ref_date", "target_date"])

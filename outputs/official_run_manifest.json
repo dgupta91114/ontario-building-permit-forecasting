@@ -1,0 +1,50 @@
+{
+  "evidence_type": "official empirical analysis",
+  "synthetic_data_used": false,
+  "analysis_window": {
+    "start": "2018-01-01",
+    "end": "2026-05-01"
+  },
+  "raw_sources": [
+    {
+      "agency": "Statistics Canada",
+      "product_id": "34100292",
+      "table_number": "34-10-0292-01",
+      "landing_page": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410029201",
+      "download_url": "https://www150.statcan.gc.ca/n1/tbl/csv/34100292-eng.zip",
+      "zip_path": "data\\raw\\34100292\\34100292-eng.zip",
+      "csv_path": "data\\raw\\34100292\\34100292.csv",
+      "sha256": "a0d22e820641bbaaccd3e5476b1013bda3a1353cf6134e0af4fe77604d9936a9",
+      "downloaded_at_utc": "2026-08-16T23:00:38.175380+00:00"
+    },
+    {
+      "agency": "Statistics Canada",
+      "product_id": "14100287",
+      "table_number": "14-10-0287-01",
+      "landing_page": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410028701",
+      "download_url": "https://www150.statcan.gc.ca/n1/tbl/csv/14100287-eng.zip",
+      "zip_path": "data\\raw\\14100287\\14100287-eng.zip",
+      "csv_path": "data\\raw\\14100287\\14100287.csv",
+      "sha256": "bb6ab526de920de38442daf0cfce6c7b2fc6058e24f272a4224aa413aa61e3b5",
+      "downloaded_at_utc": "2026-08-16T23:01:03.908918+00:00"
+    },
+    {
+      "agency": "Bank of Canada",
+      "series": "V39079",
+      "label": "Target for the overnight rate",
+      "request_url": "https://www.bankofcanada.ca/valet/observations/V39079/json?start_date=2018-01-01&end_date=2026-05-31",
+      "json_path": "data\\raw\\bank_of_canada\\V39079.json",
+      "csv_path": "data\\raw\\bank_of_canada\\V39079.csv",
+      "sha256": "6bdb8159bfdedceb2b29e766d1f1275b472ac01d5c4611bac6beb1be860e3e58",
+      "downloaded_at_utc": "2026-08-16T23:01:04.438390+00:00"
+    }
+  ],
+  "sha256": {
+    "config\\config.yaml": "7ca56778a9a30bdc61556be42b038f5b8024b33b5b570877ec1b611a3cc405b0",
+    "data\\processed\\modeling_dataset.csv": "d44248e1c2caeeecdf004417d2b7a7f9e60a6fd9b8442bf5cae820bc846d459c",
+    "data\\processed\\feature_audit.json": "510d5d7334ccfe165b11392758d52daac0ca0941bfca1db54015479b1041e910",
+    "data\\interim\\cleaning_audit.json": "93e76a6ff8522dcaf3a4c71fcdfe2f040b14bd223386fb29dcc3cc84839e6f00",
+    "outputs\\tables\\rq3_model_metrics.csv": "7b958ba78962d69c3d22c7d1a03ee346d7c1146faadb7f64c6a202f92969420e",
+    "outputs\\tables\\model_selection.json": "0e304e489426c0b589c6c2e0963f326d3081131b4a0ece4e14b7ea7c306306d9"
+  }
+}

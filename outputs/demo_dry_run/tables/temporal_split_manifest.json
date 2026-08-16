@@ -1,0 +1,10 @@
+{
+  "train_start": "2019-02-01T00:00:00",
+  "train_end": "2025-05-01T00:00:00",
+  "test_start": "2025-06-01T00:00:00",
+  "test_end": "2026-05-01T00:00:00",
+  "train_rows": 380,
+  "test_rows": 60,
+  "train_months": 76,
+  "test_months": 12
+}

@@ -1,0 +1,41 @@
+{
+  "docx": "reports\\final_draft\\QM640_Capstone_Final_Report_Draft_Debodip_Gupta.docx",
+  "sha256": "25d34cd606f9b90c3b638e81886dd4721f497834cfca43fa6d93c774832b177f",
+  "bytes": 1227470,
+  "word_count": 3720,
+  "paragraphs": 180,
+  "tables": 11,
+  "figures": 6,
+  "placeholders": [],
+  "prohibited_template_phrases": [],
+  "duplicate_long_sentences": [],
+  "quotes_over_25_words": [],
+  "missing_required_headings": [],
+  "prior_submission_artifacts": [
+    {
+      "path": "docs/submission/QM640_Capstone_Synopsis_Building_Permits_Final.docx",
+      "expected": "93F3598770D711BD3EF82EBAE9C490A67ECFE96F041D6DBF5BBF8275672A0267",
+      "actual": "93f3598770d711bd3ef82ebae9c490a67ecfe96f041d6dbf5bbf8275672a0267",
+      "unchanged": true
+    },
+    {
+      "path": "docs/submission/QM640_Capstone_Synopsis_Building_Permits_Final.pdf",
+      "expected": "8716F73F672EE906BCA35638037D9127A7296C580385DC34AA47A277C8FE1E08",
+      "actual": "8716f73f672ee906bca35638037d9127a7296c580385dc34aa47a277c8fe1e08",
+      "unchanged": true
+    },
+    {
+      "path": "reports/interim/QM640_Interim_Report_Building_Permits_Final.docx",
+      "expected": "8B859FFE5F344C7F33AE3D62A12EFCB22D2257513E6B6127854D8C5B52A2B34B",
+      "actual": "8b859ffe5f344c7f33ae3d62a12efcb22d2257513e6b6127854d8c5b52a2b34b",
+      "unchanged": true
+    },
+    {
+      "path": "reports/interim/QM640_Interim_Report_Building_Permits_Final.pdf",
+      "expected": "7D8694668123248B02F8100EE827D00E895ECBC65A419E57FC7EB4D34B0249BF",
+      "actual": "7d8694668123248b02f8100ee827d00e895ecbc65a419e57fc7eb4d34b0249bf",
+      "unchanged": true
+    }
+  ],
+  "passed": true
+}

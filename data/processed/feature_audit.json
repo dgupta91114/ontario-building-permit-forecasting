@@ -1,0 +1,34 @@
+{
+  "rows_before_complete_case_filter": 505,
+  "rows_after_complete_case_filter": 440,
+  "rows_dropped": 65,
+  "target_date_min": "2019-02-01T00:00:00",
+  "target_date_max": "2026-05-01T00:00:00",
+  "rows_by_cma": {
+    "Hamilton": 88,
+    "Kitchener-Cambridge-Waterloo": 88,
+    "London": 88,
+    "Toronto": 88,
+    "Windsor": 88
+  },
+  "forecast_horizon_months": 1,
+  "seasonal_naive_source_shift_from_origin": 11,
+  "required_columns": [
+    "permit_value_t_plus_1",
+    "seasonal_naive_pred",
+    "permit_value_t",
+    "lag_1",
+    "lag_3",
+    "lag_6",
+    "lag_12",
+    "rolling_mean_3",
+    "rolling_sd_3",
+    "month_sin",
+    "month_cos",
+    "time_index",
+    "pandemic_indicator",
+    "overnight_rate_lag_1",
+    "unemployment_lag_1",
+    "cma"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "recorded_at": "2026-08-16",
+  "purpose": "Baseline hashes used to prove that prior submission artifacts were not changed by final-draft work.",
+  "files": [
+    {
+      "path": "docs/submission/QM640_Capstone_Synopsis_Building_Permits_Final.docx",
+      "sha256": "93F3598770D711BD3EF82EBAE9C490A67ECFE96F041D6DBF5BBF8275672A0267",
+      "bytes": 261620
+    },
+    {
+      "path": "docs/submission/QM640_Capstone_Synopsis_Building_Permits_Final.pdf",
+      "sha256": "8716F73F672EE906BCA35638037D9127A7296C580385DC34AA47A277C8FE1E08",
+      "bytes": 512548
+    },
+    {
+      "path": "reports/interim/QM640_Interim_Report_Building_Permits_Final.docx",
+      "sha256": "8B859FFE5F344C7F33AE3D62A12EFCB22D2257513E6B6127854D8C5B52A2B34B",
+      "bytes": 1144859
+    },
+    {
+      "path": "reports/interim/QM640_Interim_Report_Building_Permits_Final.pdf",
+      "sha256": "7D8694668123248B02F8100EE827D00E895ECBC65A419E57FC7EB4D34B0249BF",
+      "bytes": 1373258
+    }
+  ]
+}

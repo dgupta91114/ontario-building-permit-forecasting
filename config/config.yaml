@@ -33,6 +33,15 @@ sources:
 
 filters:
   building_permits:
+    seasonal_adjustment_value_type:
+      current:
+        exact_candidates: ["Seasonally adjusted, current"]
+        required_tokens: ["seasonally", "adjusted", "current"]
+        forbidden_tokens: ["unadjusted", "constant"]
+      constant:
+        exact_candidates: ["Seasonally adjusted, constant dollars"]
+        required_tokens: ["seasonally", "adjusted", "constant", "dollar"]
+        forbidden_tokens: ["unadjusted", "current"]
     seasonal_adjustment:
       exact_candidates:
         - "Seasonally adjusted"
@@ -45,11 +54,16 @@ filters:
       forbidden_tokens: ["constant"]
     type_of_structure:
       exact_candidates:
+        - "Total residential"
         - "Residential structures, total"
         - "Total residential"
         - "Residential, total"
       required_tokens: ["residential", "total"]
       forbidden_tokens: ["non-residential"]
+    variable:
+      exact_candidates: ["Value of permits"]
+      required_tokens: ["value", "permit"]
+      forbidden_tokens: ["number"]
     type_of_work:
       exact_candidates:
         - "Types of work, total"
@@ -64,6 +78,7 @@ filters:
     data_type_exact_candidates: ["Seasonally adjusted"]
     gender_exact_candidates: ["Total, gender", "Both sexes", "Total - Gender"]
     age_group_exact_candidates: ["15 years and over"]
+    statistics_exact_candidates: ["Estimate"]
 
 features:
   forecast_horizon_months: 1

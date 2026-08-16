@@ -1,4 +1,4 @@
-> **Interim evidence notice:** The current numerical outputs were generated from a schema-conformant synthetic dry-run dataset to validate the software and research workflow. They are not empirical findings about Ontario building permits. See `docs/interim_status.md` and `reports/interim/`.
+> **Official-analysis status:** The current processed dataset, tables, figures, and final-report draft were generated from frozen official Statistics Canada and Bank of Canada sources through May 2026. Earlier synthetic software-validation outputs are isolated under `data/demo/` and `outputs/demo_dry_run/` and are not used in the empirical report.
 
 # Forecasting Ontario Residential Building-Permit Values
 
@@ -149,7 +149,7 @@ The preferred model must satisfy the prespecified governance rule in the synopsi
 Run this command from a clean environment:
 
 ```bash
-python scripts/07_reproducibility_check.py
+python scripts/08_reproducibility_check.py
 ```
 
 It validates required files, checks hashes, runs unit tests, and confirms that the processed dataset can be regenerated from the source manifest.

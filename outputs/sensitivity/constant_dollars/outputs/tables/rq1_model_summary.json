@@ -1,0 +1,7 @@
+{
+  "hac_r_squared": 0.9211045545293134,
+  "hac_adjusted_r_squared": 0.9196401379080478,
+  "n": 440,
+  "trend_figure": "outputs\\figures\\rq1_trend_by_cma.png",
+  "seasonal_figure": "outputs\\figures\\rq1_seasonal_profile.png"
+}

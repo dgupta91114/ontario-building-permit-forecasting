@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import io
 import json
+import shutil
 import time
 import zipfile
 from pathlib import Path
@@ -67,7 +68,9 @@ def extract_primary_csv(zip_path: Path, destination_dir: Path) -> Path:
         primary = max(csv_members, key=lambda m: m.file_size)
         output = destination_dir / Path(primary.filename).name
         with archive.open(primary) as source, output.open("wb") as target:
-            target.write(source.read())
+            # Full Statistics Canada tables can expand to many gigabytes. Stream the
+            # member rather than materializing the entire CSV in memory.
+            shutil.copyfileobj(source, target, length=1024 * 1024)
     return output
 
 

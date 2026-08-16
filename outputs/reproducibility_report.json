@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "missing_required_files": [],
+  "sha256": {
+    "README.md": "75b334eee6db3b226fd0ae6568e4c11e544828056379d5cc5a401fd7aa1fe2ad",
+    "config\\config.yaml": "7ca56778a9a30bdc61556be42b038f5b8024b33b5b570877ec1b611a3cc405b0",
+    "docs\\data_dictionary.csv": "d64295b81a3a9f66aa6856e79775c6966d547aaae614df018ce66486eb8808e3",
+    "docs\\source_manifest.csv": "8ae3b24c99b307c7c0515c138541dddc134620799f2ccdb4c5fc9cab7aedceec",
+    "data\\processed\\modeling_dataset.csv": "d44248e1c2caeeecdf004417d2b7a7f9e60a6fd9b8442bf5cae820bc846d459c",
+    "outputs\\tables\\sample_size_calculations.csv": "16df01eed6ebf1ebbe8dbe5b1fbb71a5b3f34f19d68d60f441202213e53c3fd9",
+    "outputs\\tables\\rq3_model_metrics.csv": "7b958ba78962d69c3d22c7d1a03ee346d7c1146faadb7f64c6a202f92969420e",
+    "outputs\\tables\\model_selection.json": "0e304e489426c0b589c6c2e0963f326d3081131b4a0ece4e14b7ea7c306306d9",
+    "outputs\\official_run_manifest.json": "a2aae5ccfc59b78750ec1927c3b383c411caaa32bd695c0f555e3d6970d2cef4",
+    "data\\raw\\download_manifest.json": "42ee9800b4b11135f94f82fb44bffbbb5b937b86059dcbb2ea7d754b9e81818a"
+  },
+  "dataset_checks": {
+    "rows": 440,
+    "columns": 23,
+    "duplicate_cma_target_rows": 0,
+    "missing_target": 0,
+    "demo_rows": 0,
+    "cmas": [
+      "Hamilton",
+      "Kitchener-Cambridge-Waterloo",
+      "London",
+      "Toronto",
+      "Windsor"
+    ],
+    "target_date_max": "2026-05-01"
+  },
+  "pytest_return_code": 0,
+  "pytest_stdout": "...........                                                              [100%]\n============================== warnings summary ===============================\ntests/test_metrics.py::test_paired_error_improvement_direction\n  C:\\Users\\debod\\Documents\\Capstone Project\\ontario-building-permit-forecasting\\.venv-final\\Lib\\site-packages\\scipy\\stats\\_axis_nan_policy.py:430: RuntimeWarning: Precision loss occurred in moment calculation due to catastrophic cancellation. This occurs when the data are nearly identical. Results may be unreliable.\n    return hypotest_fun_in(*args, **kwds)\n\n.venv-final\\Lib\\site-packages\\_pytest\\cacheprovider.py:475\n  C:\\Users\\debod\\Documents\\Capstone Project\\ontario-building-permit-forecasting\\.venv-final\\Lib\\site-packages\\_pytest\\cacheprovider.py:475: PytestCacheWarning: could not create cache path C:\\Users\\debod\\Documents\\Capstone Project\\ontario-building-permit-forecasting\\.pytest_cache\\v\\cache\\nodeids: [WinError 5] Access is denied: 'C:\\\\Users\\\\debod\\\\Documents\\\\Capstone Project\\\\ontario-building-permit-forecasting\\\\.pytest_cache\\\\v\\\\cache'\n    config.cache.set(\"cache/nodeids\", sorted(self.cached_nodeids))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n",
+  "pytest_stderr": ""
+}

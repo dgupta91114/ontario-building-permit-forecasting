@@ -1,0 +1,2 @@
+n,mae_a,mae_b,improvement_pct_a_vs_b,paired_t_statistic,paired_t_p_value,wilcoxon_statistic,wilcoxon_p_value,dm_style_statistic,dm_style_p_value,practical_threshold_pct,meets_practical_threshold
+60,143145.48017197053,137874.03769340602,-3.8233757179772665,-2.1139106928182527,0.038760026762726954,619.0,0.029329106247332124,-2.330665508442749,0.019771004279498516,5.0,False

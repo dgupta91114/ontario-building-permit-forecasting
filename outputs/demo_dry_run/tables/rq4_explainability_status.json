@@ -1,0 +1,10 @@
+{
+  "selected_model": "xgboost",
+  "permutation_figure": "outputs/figures/rq4_permutation_importance.png",
+  "shap": {
+    "attempted": true,
+    "success": true,
+    "explanation_scale": "log1p target model scale; ranking is used for global interpretation",
+    "figure": "outputs/figures/rq4_shap_beeswarm.png"
+  }
+}

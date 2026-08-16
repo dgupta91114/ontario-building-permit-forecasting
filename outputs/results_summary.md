@@ -21,53 +21,53 @@
 
 | n | mae_a | mae_b | improvement_pct_a_vs_b | paired_t_statistic | paired_t_p_value | wilcoxon_statistic | wilcoxon_p_value | dm_style_statistic | dm_style_p_value | practical_threshold_pct | meets_practical_threshold |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 60.000 | 20272.914 | 20272.914 | 0.000 |  |  | 0.000 |  | 0.000 | 1.000 | 5.000 | False |
+| 60.000 | 75378.504 | 75678.450 | 0.396 | 1.089 | 0.280 | 767.000 | 0.276 | 1.136 | 0.256 | 5.000 | False |
 
 ## RQ3 — Holdout model comparison
 
 | model | n | mae | rmse | mase | smape_pct | wape_pct |
 |---|---|---|---|---|---|---|
-| xgboost | 60.000 | 13975.867 | 17836.165 | 0.651 | 5.457 | 5.447 |
-| random_forest | 60.000 | 14468.678 | 18659.799 | 0.671 | 5.649 | 5.639 |
-| seasonal_naive | 60.000 | 17944.437 | 22183.453 | 0.848 | 7.211 | 6.994 |
-| elastic_net_history | 60.000 | 20272.914 | 25113.949 | 0.940 | 7.943 | 7.901 |
-| elastic_net_macro | 60.000 | 20272.914 | 25113.949 | 0.940 | 7.943 | 7.901 |
+| xgboost | 60.000 | 53677.992 | 73485.259 | 0.571 | 28.379 | 16.796 |
+| random_forest | 60.000 | 59360.277 | 93306.657 | 0.572 | 28.078 | 18.574 |
+| elastic_net_macro | 60.000 | 75378.504 | 118806.532 | 0.725 | 34.605 | 23.586 |
+| elastic_net_history | 60.000 | 75678.450 | 119173.293 | 0.725 | 34.618 | 23.679 |
+| seasonal_naive | 60.000 | 116199.633 | 204328.684 | 0.990 | 42.977 | 36.358 |
 
 ## Prespecified model-selection outcome
 
 - Selected model: **xgboost**
 - Rule outcome: candidate accepted
-- Holdout interval coverage: 0.867
+- Holdout interval coverage: 1.000
 
 ## RQ4 — Regional reliability
 
 | model | cma | n | mae | rmse | mase | smape_pct | wape_pct |
 |---|---|---|---|---|---|---|---|
-| elastic_net_history | Hamilton | 12.000 | 18690.544 | 21566.823 | 0.967 | 8.096 | 7.866 |
-| elastic_net_history | Kitchener-Cambridge-Waterloo | 12.000 | 19180.943 | 24048.014 | 0.957 | 7.622 | 7.450 |
-| elastic_net_history | London | 12.000 | 23526.664 | 26159.380 | 1.017 | 8.776 | 8.552 |
-| elastic_net_history | Toronto | 12.000 | 13183.769 | 16683.252 | 0.645 | 6.356 | 6.432 |
-| elastic_net_history | Windsor | 12.000 | 26782.652 | 33874.377 | 1.112 | 8.868 | 8.703 |
-| elastic_net_macro | Hamilton | 12.000 | 18690.544 | 21566.823 | 0.967 | 8.096 | 7.866 |
-| elastic_net_macro | Kitchener-Cambridge-Waterloo | 12.000 | 19180.943 | 24048.014 | 0.957 | 7.622 | 7.450 |
-| elastic_net_macro | London | 12.000 | 23526.664 | 26159.380 | 1.017 | 8.776 | 8.552 |
-| elastic_net_macro | Toronto | 12.000 | 13183.769 | 16683.252 | 0.645 | 6.356 | 6.432 |
-| elastic_net_macro | Windsor | 12.000 | 26782.652 | 33874.377 | 1.112 | 8.868 | 8.703 |
-| random_forest | Hamilton | 12.000 | 12288.274 | 15631.234 | 0.636 | 5.333 | 5.172 |
-| random_forest | Kitchener-Cambridge-Waterloo | 12.000 | 13841.291 | 17305.853 | 0.690 | 5.444 | 5.376 |
-| random_forest | London | 12.000 | 16218.149 | 19292.288 | 0.701 | 5.977 | 5.895 |
-| random_forest | Toronto | 12.000 | 10918.737 | 13961.952 | 0.534 | 5.274 | 5.327 |
-| random_forest | Windsor | 12.000 | 19076.937 | 25099.483 | 0.792 | 6.216 | 6.199 |
-| seasonal_naive | Hamilton | 12.000 | 20061.161 | 24017.007 | 1.038 | 9.018 | 8.443 |
-| seasonal_naive | Kitchener-Cambridge-Waterloo | 12.000 | 21940.343 | 24384.799 | 1.094 | 8.846 | 8.522 |
-| seasonal_naive | London | 12.000 | 20701.835 | 26069.648 | 0.895 | 7.615 | 7.525 |
-| seasonal_naive | Toronto | 12.000 | 12070.778 | 16745.591 | 0.590 | 5.632 | 5.889 |
-| seasonal_naive | Windsor | 12.000 | 14948.069 | 18139.780 | 0.621 | 4.947 | 4.857 |
-| xgboost | Hamilton | 12.000 | 13847.075 | 15694.681 | 0.716 | 5.981 | 5.828 |
-| xgboost | Kitchener-Cambridge-Waterloo | 12.000 | 13510.479 | 17494.649 | 0.674 | 5.312 | 5.248 |
-| xgboost | London | 12.000 | 16868.540 | 19033.858 | 0.729 | 6.230 | 6.132 |
-| xgboost | Toronto | 12.000 | 9375.334 | 10916.791 | 0.459 | 4.492 | 4.574 |
-| xgboost | Windsor | 12.000 | 16277.908 | 23596.486 | 0.676 | 5.267 | 5.290 |
+| elastic_net_history | Hamilton | 12.000 | 39300.476 | 50701.818 | 0.506 | 37.790 | 38.550 |
+| elastic_net_history | Kitchener-Cambridge-Waterloo | 12.000 | 49441.954 | 63579.947 | 0.880 | 38.172 | 37.102 |
+| elastic_net_history | London | 12.000 | 56457.255 | 68815.066 | 0.894 | 39.676 | 37.579 |
+| elastic_net_history | Toronto | 12.000 | 209219.324 | 242965.765 | 0.536 | 18.834 | 18.019 |
+| elastic_net_history | Windsor | 12.000 | 23973.243 | 25107.935 | 0.809 | 38.616 | 46.632 |
+| elastic_net_macro | Hamilton | 12.000 | 39319.747 | 50696.870 | 0.506 | 37.803 | 38.569 |
+| elastic_net_macro | Kitchener-Cambridge-Waterloo | 12.000 | 49432.814 | 63525.250 | 0.880 | 38.163 | 37.095 |
+| elastic_net_macro | London | 12.000 | 56361.515 | 68689.187 | 0.893 | 39.593 | 37.516 |
+| elastic_net_macro | Toronto | 12.000 | 207650.390 | 242101.578 | 0.532 | 18.654 | 17.884 |
+| elastic_net_macro | Windsor | 12.000 | 24128.054 | 25257.719 | 0.814 | 38.812 | 46.933 |
+| random_forest | Hamilton | 12.000 | 38091.608 | 45522.509 | 0.490 | 37.241 | 37.364 |
+| random_forest | Kitchener-Cambridge-Waterloo | 12.000 | 49801.106 | 61540.541 | 0.886 | 38.483 | 37.372 |
+| random_forest | London | 12.000 | 50762.047 | 61924.503 | 0.804 | 35.103 | 33.788 |
+| random_forest | Toronto | 12.000 | 149399.833 | 183692.724 | 0.382 | 12.690 | 12.867 |
+| random_forest | Windsor | 12.000 | 8746.793 | 9667.614 | 0.295 | 16.871 | 17.014 |
+| seasonal_naive | Hamilton | 12.000 | 67226.500 | 117420.193 | 0.865 | 47.856 | 65.942 |
+| seasonal_naive | Kitchener-Cambridge-Waterloo | 12.000 | 73332.417 | 88366.049 | 1.305 | 59.490 | 55.030 |
+| seasonal_naive | London | 12.000 | 67404.583 | 92355.582 | 1.068 | 44.888 | 44.866 |
+| seasonal_naive | Toronto | 12.000 | 348705.167 | 421316.540 | 0.893 | 26.611 | 30.032 |
+| seasonal_naive | Windsor | 12.000 | 24329.500 | 33433.744 | 0.821 | 36.039 | 47.325 |
+| xgboost | Hamilton | 12.000 | 39300.040 | 44958.486 | 0.506 | 38.538 | 38.549 |
+| xgboost | Kitchener-Cambridge-Waterloo | 12.000 | 51913.702 | 63445.344 | 0.924 | 40.085 | 38.957 |
+| xgboost | London | 12.000 | 53637.566 | 63135.863 | 0.850 | 37.443 | 35.702 |
+| xgboost | Toronto | 12.000 | 115212.708 | 129884.555 | 0.295 | 10.032 | 9.923 |
+| xgboost | Windsor | 12.000 | 8325.943 | 9884.566 | 0.281 | 15.798 | 16.195 |
 
 ## Interpretation checklist
 

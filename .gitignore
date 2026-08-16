@@ -1,4 +1,6 @@
 .venv/
+.venv-final/
+.mplconfig/
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -13,6 +15,7 @@ __pycache__/
 !/data/interim/.gitkeep
 /outputs/models/*
 !/outputs/models/.gitkeep
+/outputs/**/models/*.joblib
 
 # Local/editor files
 .env
@@ -23,6 +26,7 @@ Thumbs.db
 .ipynb_checkpoints/
 *.tmp
 *.log
+.~lock.*#
 
 # Local AI assistant / scratch artifacts
 .agents/
