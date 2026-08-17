@@ -46,11 +46,24 @@ This internal record supersedes the earlier synthetic-only status. No prior subm
 - Generated `reports/final_draft/QM640_Capstone_Final_Report_Draft_Debodip_Gupta.docx` from a protected working copy of the supplied interim template.
 - The draft contains 3,710 narrative words, 11 official tables, six official figures, APA-oriented formatting, references, limitations, recommendations, and appendices.
 - The mentor name was confirmed from the prior report and inserted as Dr. Sanhita Karmakar; no placeholders remain.
+- Enforced Times New Roman across document styles, paragraphs, tables, headings, headers, and hyperlink runs.
+- Added 18 genuine external Word hyperlinks: the GitHub repository and all 17 reference URLs/DOIs.
+- Inspected the DOCX package for hidden text, comments, custom XML, and AI-assistant identifiers; none were present.
 - Local structural/originality validation found no template instructions, long quotations, duplicated long sentences, or missing required sections.
 - The expanded unit suite passes 11 tests.
 - The end-to-end pipeline succeeds from frozen raw inputs with `python run_pipeline.py --skip-download`.
 - `scripts/08_reproducibility_check.py` passes and confirms zero demo rows.
 - Package versions are recorded in `environment-lock.txt`.
+
+## GitHub publication status
+
+- Repository: <https://github.com/dgupta91114/ontario-building-permit-forecasting>
+- Branch: `main`
+- Official-analysis and draft-report upload commit: `853b5a7` (`Complete official capstone analysis and draft report`)
+- Push completed successfully on August 16, 2026.
+- The upload includes the official processed dataset, current- and constant-dollar results, figures, source-label audits, reproducibility evidence, final DOCX draft, report generator, and validation scripts.
+- The upload excludes raw multi-gigabyte government downloads, virtual environments, caches, model binaries, transient Word lock files, and local assistant/prompt/chat artifacts.
+- Prior synopsis and interim submission DOCX/PDF artifacts remained unchanged, as verified against their recorded SHA-256 hashes.
 
 ## Evidence boundary
 
