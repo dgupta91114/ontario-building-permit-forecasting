@@ -1,0 +1,59 @@
+{
+  "building_permits": {
+    "source_rows": 38338128,
+    "selected_rows": 505,
+    "date_min": "2018-01-01T00:00:00",
+    "date_max": "2026-05-01T00:00:00",
+    "rows_by_cma": {
+      "Hamilton": 101,
+      "Kitchener-Cambridge-Waterloo": 101,
+      "London": 101,
+      "Toronto": 101,
+      "Windsor": 101
+    },
+    "missing_values": 0,
+    "chosen_labels": {
+      "seasonal_adjustment": "Seasonally adjusted, current",
+      "value_type": "Seasonally adjusted, current",
+      "type_of_structure": "Total residential",
+      "type_of_work": "Types of work, total",
+      "variable": "Value of permits"
+    },
+    "value_basis": "current",
+    "source_schema": "combined seasonal adjustment/value type",
+    "source_columns": {
+      "date": "REF_DATE",
+      "geography": "GEO",
+      "dguid": "DGUID",
+      "value": "VALUE",
+      "status": "STATUS",
+      "seasonal_adjustment": "Seasonal adjustment, value type",
+      "value_type": "Seasonal adjustment, value type",
+      "type_of_structure": "Type of building",
+      "type_of_work": "Type of work"
+    }
+  },
+  "unemployment": {
+    "source_rows": 5457537,
+    "selected_rows": 101,
+    "date_min": "2018-01-01T00:00:00",
+    "date_max": "2026-05-01T00:00:00",
+    "missing_values": 0,
+    "chosen_labels": {
+      "geography": "Ontario",
+      "characteristic": "Unemployment rate",
+      "data_type": "Seasonally adjusted",
+      "gender": "Total - Gender",
+      "age_group": "15 years and over",
+      "statistics": "Estimate"
+    }
+  },
+  "overnight_rate": {
+    "source_rows": 2181,
+    "selected_months": 101,
+    "date_min": "2018-01-01T00:00:00",
+    "date_max": "2026-05-01T00:00:00",
+    "aggregation": "last daily observation in each calendar month",
+    "missing_values": 0
+  }
+}

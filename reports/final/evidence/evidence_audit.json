@@ -1,0 +1,56 @@
+{
+  "verified_on": "2026-09-13",
+  "frozen_artifacts": [
+    {
+      "path": "config/config.yaml",
+      "sha256": "7ca56778a9a30bdc61556be42b038f5b8024b33b5b570877ec1b611a3cc405b0",
+      "matches": true
+    },
+    {
+      "path": "data/processed/modeling_dataset.csv",
+      "sha256": "d44248e1c2caeeecdf004417d2b7a7f9e60a6fd9b8442bf5cae820bc846d459c",
+      "matches": true
+    },
+    {
+      "path": "data/processed/feature_audit.json",
+      "sha256": "510d5d7334ccfe165b11392758d52daac0ca0941bfca1db54015479b1041e910",
+      "matches": true
+    },
+    {
+      "path": "data/interim/cleaning_audit.json",
+      "sha256": "93e76a6ff8522dcaf3a4c71fcdfe2f040b14bd223386fb29dcc3cc84839e6f00",
+      "matches": true
+    },
+    {
+      "path": "outputs/tables/rq3_model_metrics.csv",
+      "sha256": "7b958ba78962d69c3d22c7d1a03ee346d7c1146faadb7f64c6a202f92969420e",
+      "matches": true
+    },
+    {
+      "path": "outputs/tables/model_selection.json",
+      "sha256": "0e304e489426c0b589c6c2e0963f326d3081131b4a0ece4e14b7ea7c306306d9",
+      "matches": true
+    }
+  ],
+  "official_metrics_recomputed": true,
+  "saved_model_predictions_match": true,
+  "prior_submission_artifacts_unchanged": true,
+  "train_rows": 380,
+  "holdout_rows": 60,
+  "unique_holdout_months": 12,
+  "power_under_independence_assumption": {
+    "paired_power_n60_d035": 0.7601438871366386,
+    "anova_power_n60_f025_k5": 0.27777189655046
+  },
+  "interval_fit_metrics": {
+    "model": "xgboost_interval_fit",
+    "n": 60,
+    "mae": 51354.05778333333,
+    "rmse": 75364.70663358273,
+    "mase": 0.543958380961835,
+    "smape_pct": 27.13346218985481,
+    "wape_pct": 16.068474699184478
+  },
+  "interval_coverage": 1.0,
+  "supplementary_status": "Report diagnostics; no retuning or replacement of frozen results"
+}

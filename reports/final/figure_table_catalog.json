@@ -1,0 +1,122 @@
+[
+  {
+    "label": "Table 1",
+    "title": "Literature Relevance Matrix: Domain and Evaluation",
+    "planned_page": 8
+  },
+  {
+    "label": "Table 2",
+    "title": "Literature Relevance Matrix: Models, Interpretation, and Uncertainty",
+    "planned_page": 9
+  },
+  {
+    "label": "Table 3",
+    "title": "Official Data Sources and Frozen Analytical Scope",
+    "planned_page": 10
+  },
+  {
+    "label": "Table 4",
+    "title": "Planned Sample Sizes and the Samples Actually Evaluated",
+    "planned_page": 13
+  },
+  {
+    "label": "Table 5",
+    "title": "Chronological Training, Validation, Holdout, and Calibration Windows",
+    "planned_page": 16
+  },
+  {
+    "label": "Table 6",
+    "title": "Candidate Configurations and Selected Hyperparameters",
+    "planned_page": 17
+  },
+  {
+    "label": "Figure 1",
+    "title": "End-to-End Workflow of the Proposed System",
+    "planned_page": 19
+  },
+  {
+    "label": "Table 7",
+    "title": "Training, Cross-Validation, and Holdout Accuracy",
+    "planned_page": 22
+  },
+  {
+    "label": "Table 8",
+    "title": "Final Holdout Model Comparison",
+    "planned_page": 23
+  },
+  {
+    "label": "Figure 2",
+    "title": "Holdout Error by Model",
+    "planned_page": 23
+  },
+  {
+    "label": "Figure 3",
+    "title": "Regional Permit Histories Used as Model Inputs",
+    "planned_page": 24
+  },
+  {
+    "label": "Table 9",
+    "title": "Descriptive Regional Permit Values",
+    "planned_page": 25
+  },
+  {
+    "label": "Table 10",
+    "title": "Regional Autocorrelation and Pooled Temporal Tests",
+    "planned_page": 25
+  },
+  {
+    "label": "Table 11",
+    "title": "Incremental Value of Macroeconomic Inputs in Elastic Net",
+    "planned_page": 26
+  },
+  {
+    "label": "Figure 4",
+    "title": "XGBoost Point Forecasts and Observed Holdout Values",
+    "planned_page": 27
+  },
+  {
+    "label": "Table 12",
+    "title": "XGBoost Regional Holdout Performance",
+    "planned_page": 28
+  },
+  {
+    "label": "Table 13",
+    "title": "Supplementary Comparison of Monthly Pooled Losses",
+    "planned_page": 28
+  },
+  {
+    "label": "Figure 5",
+    "title": "Leading Permutation-Importance Features",
+    "planned_page": 29
+  },
+  {
+    "label": "Figure 6",
+    "title": "Leading Mean Absolute SHAP Attributions",
+    "planned_page": 29
+  },
+  {
+    "label": "Table 14",
+    "title": "Empirical Coverage and Width of the Separate Interval Model",
+    "planned_page": 30
+  },
+  {
+    "label": "Table 15",
+    "title": "Constant-Dollar Sensitivity: Holdout Performance",
+    "planned_page": 31
+  },
+  {
+    "label": "Table 16",
+    "title": "Retrospective Scorecard Example: KCW, June 2025",
+    "planned_page": 33
+  },
+  {
+    "label": "Table A1",
+    "title": "Modeling Dataset Fields and Analytical Roles",
+    "planned_page": 39
+  },
+  {
+    "label": "Table B1",
+    "title": "Repository Evidence and Reproduction Guide",
+    "planned_page": 40
+  }
+]

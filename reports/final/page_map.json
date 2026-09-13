@@ -1,0 +1,202 @@
+[
+  {
+    "planned_page": 1,
+    "heading": "Title page",
+    "manuscript_words": 1
+  },
+  {
+    "planned_page": 2,
+    "heading": "Abstract",
+    "manuscript_words": 308
+  },
+  {
+    "planned_page": 3,
+    "heading": "Introduction",
+    "manuscript_words": 280
+  },
+  {
+    "planned_page": 4,
+    "heading": "Problem Statement",
+    "manuscript_words": 256
+  },
+  {
+    "planned_page": 5,
+    "heading": "Contributions and Expected Value",
+    "manuscript_words": 291
+  },
+  {
+    "planned_page": 6,
+    "heading": "Literature Review",
+    "manuscript_words": 272
+  },
+  {
+    "planned_page": 7,
+    "heading": "Critical Synthesis and Research Gap",
+    "manuscript_words": 306
+  },
+  {
+    "planned_page": 8,
+    "heading": "Evidence / references 8",
+    "manuscript_words": 51
+  },
+  {
+    "planned_page": 9,
+    "heading": "Evidence / references 9",
+    "manuscript_words": 44
+  },
+  {
+    "planned_page": 10,
+    "heading": "Materials and Method",
+    "manuscript_words": 209
+  },
+  {
+    "planned_page": 11,
+    "heading": "Data Preparation and Exploratory Analysis",
+    "manuscript_words": 309
+  },
+  {
+    "planned_page": 12,
+    "heading": "Research Hypotheses",
+    "manuscript_words": 298
+  },
+  {
+    "planned_page": 13,
+    "heading": "Minimum Sample Size Calculations",
+    "manuscript_words": 201
+  },
+  {
+    "planned_page": 14,
+    "heading": "Sample Adequacy and Statistical Interpretation",
+    "manuscript_words": 312
+  },
+  {
+    "planned_page": 15,
+    "heading": "Feature Engineering and Predictor Availability",
+    "manuscript_words": 308
+  },
+  {
+    "planned_page": 16,
+    "heading": "Data Splitting and Validation",
+    "manuscript_words": 218
+  },
+  {
+    "planned_page": 17,
+    "heading": "Model Selection and Justification",
+    "manuscript_words": 207
+  },
+  {
+    "planned_page": 18,
+    "heading": "Accuracy Measures and Uncertainty",
+    "manuscript_words": 263
+  },
+  {
+    "planned_page": 19,
+    "heading": "Architecture Diagram/Workflow",
+    "manuscript_words": 57
+  },
+  {
+    "planned_page": 20,
+    "heading": "Workflow Components",
+    "manuscript_words": 310
+  },
+  {
+    "planned_page": 21,
+    "heading": "Tools and Technologies",
+    "manuscript_words": 315
+  },
+  {
+    "planned_page": 22,
+    "heading": "Results",
+    "manuscript_words": 199
+  },
+  {
+    "planned_page": 23,
+    "heading": "Holdout Comparison and Visual Evidence",
+    "manuscript_words": 76
+  },
+  {
+    "planned_page": 24,
+    "heading": "Results by Research Question: RQ1",
+    "manuscript_words": 87
+  },
+  {
+    "planned_page": 25,
+    "heading": "RQ1: Scale, Persistence, and Conditional Associations",
+    "manuscript_words": 135
+  },
+  {
+    "planned_page": 26,
+    "heading": "RQ2: Incremental Macroeconomic Information",
+    "manuscript_words": 232
+  },
+  {
+    "planned_page": 27,
+    "heading": "RQ3: Forecast Behavior Over the Holdout",
+    "manuscript_words": 66
+  },
+  {
+    "planned_page": 28,
+    "heading": "RQ3 Stability and RQ4 Regional Reliability",
+    "manuscript_words": 146
+  },
+  {
+    "planned_page": 29,
+    "heading": "RQ4: Interpretation of the Preferred Model",
+    "manuscript_words": 86
+  },
+  {
+    "planned_page": 30,
+    "heading": "RQ4: Prediction Intervals and Decision Precision",
+    "manuscript_words": 232
+  },
+  {
+    "planned_page": 31,
+    "heading": "Overall Interpretation and Practical Significance",
+    "manuscript_words": 221
+  },
+  {
+    "planned_page": 32,
+    "heading": "Implementation and User Benefit",
+    "manuscript_words": 268
+  },
+  {
+    "planned_page": 33,
+    "heading": "User Interaction",
+    "manuscript_words": 216
+  },
+  {
+    "planned_page": 34,
+    "heading": "Limitations and Further Improvements",
+    "manuscript_words": 287
+  },
+  {
+    "planned_page": 35,
+    "heading": "Future Improvements",
+    "manuscript_words": 251
+  },
+  {
+    "planned_page": 36,
+    "heading": "Bibliography",
+    "manuscript_words": 5
+  },
+  {
+    "planned_page": 37,
+    "heading": "Evidence / references 37",
+    "manuscript_words": 1
+  },
+  {
+    "planned_page": 38,
+    "heading": "Evidence / references 38",
+    "manuscript_words": 1
+  },
+  {
+    "planned_page": 39,
+    "heading": "Appendix A: Data Dictionary",
+    "manuscript_words": 82
+  },
+  {
+    "planned_page": 40,
+    "heading": "Appendix B: Reproducibility and Evidence Map",
+    "manuscript_words": 160
+  }
+]

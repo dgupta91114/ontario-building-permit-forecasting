@@ -1,0 +1,8 @@
+{
+  "date": "2026-09-13",
+  "command": ".venv-final/Scripts/python.exe -m pytest -q -p no:cacheprovider",
+  "passed": 11,
+  "failed": 0,
+  "warning": "Existing SciPy precision-loss warning in test_paired_error_improvement_direction, whose synthetic inputs have nearly identical differences.",
+  "visual_review": "All 40 pages reviewed in rendered contact sheets; literature matrix, architecture, and updated references also inspected at larger scale."
+}

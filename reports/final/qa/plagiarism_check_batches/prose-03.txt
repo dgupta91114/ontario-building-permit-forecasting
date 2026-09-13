@@ -1,0 +1,39 @@
+The first six sources connect the domain question with evaluation discipline. Their principal implication is that a plausible predictor or sophisticated algorithm still needs a clearly defined target, a valid comparison period, and a sample appropriate to the stated inference. The relevance column records the specific design decision adopted here.
+
+Table 2
+
+Literature Relevance Matrix: Models, Interpretation, and Uncertainty
+
+Note. Original paraphrases of the cited sources. Complete APA references appear in the bibliography. A source's original setting is distinguished from this study's application.
+
+The remaining sources motivate regularization, nonlinear alternatives, attribution, and uncertainty. Their findings are methodological precedents. They do not constitute external validation of the five-CMA results. The report tests the adopted methods within its own frozen observations and identifies the conditions that remain unverified.
+
+Table 3
+
+Official Data Sources and Frozen Analytical Scope
+
+Note. All selected monthly series cover January 2018–May 2026. Retrieval: August 16, 2026 (UTC). Sources: Bank of Canada (n.d.) and Statistics Canada (2026b, 2026c).
+
+Table 3 identifies the sources. The unit of analysis is one CMA in one calendar month. The retained geographical scope is Toronto, Hamilton, Kitchener-Cambridge-Waterloo, London, and Windsor; other geographies are excluded. Permit filters select total residential structures, all work types, value of permits, seasonally adjusted current values, dollar units, and the thousands scalar. Counts, non-residential categories, and unadjusted values are excluded from the primary analysis (Statistics Canada, 2026b).
+
+Unemployment filters select Ontario, unemployment rate, total gender, ages 15 years and over, seasonally adjusted data, and the estimate statistic (Statistics Canada, 2026c). The daily policy-rate series is summarized by its last observed value in each month. Macroeconomic predictors are then lagged by one reference month. Source access uses official downloadable tables and the Valet application programming interface (API), not webpage scraping (Bank of Canada, n.d.).
+
+The source window is deliberately frozen at January 2018–May 2026 for continuity with the completed empirical study. Archives were downloaded on August 16, 2026 (UTC). May 2026 is the study cutoff, not a claim about the latest information available on the submission date. The report uses Canadian dollars (CAD); saved values are in thousands, while monetary result tables are converted to millions for readability.
+
+The permit cleaner streamed 38,338,128 national rows and retained 505 observations, representing 101 months in each selected CMA. The unemployment cleaner examined 5,457,537 rows and retained 101 monthly observations. The rate source contained 2,181 daily records, aggregated to 101 months. These scan counts describe source processing, not sample size. The analytical population remains the selected CMA-month records.
+
+Joins use the reference month and enforce many-to-one relationships for province-wide macroeconomic inputs. Every selected source value is present. One London permit observation for April 2025 has the published E status, indicating use with caution. It is retained and disclosed because it is a usable official estimate. Blank status fields are not treated as missing permit values. Legitimate large authorizations remain in the data; deleting them would suppress a material source of forecasting risk.
+
+Feature construction removes the first 12 origin months in each region and the final origin lacking a future target. Thus, 505 − 5(12 + 1) = 440 complete records remain. Origins cover January 2019–April 2026, and targets cover February 2019–May 2026. There are 88 targets per CMA, no duplicate CMA-target keys, and no missing modeled targets. Transformations operate within region before rows are sorted into chronological validation order.
+
+Exploratory data analysis (EDA) describes scale, dispersion, persistence, and temporal shape through summary statistics, autocorrelations, plots, and a pooled descriptive regression. Because the source is already seasonally adjusted, the calendar profile measures residual calendar structure, not raw seasonal demand. EDA on the full analytic panel is descriptive; it does not supply a new feature search after viewing the holdout. Figures and tables in Results show regional behavior without forcing all markets onto Toronto's vertical scale.
+
+The analysis contains public aggregates and no participant recruitment or individual-level identifiers. It supports regional interpretation only; a relationship in these aggregates cannot establish individual household or developer behavior.
+
+All reported hypothesis decisions use a nominal two-sided significance level of α = .05. Direction and practical usefulness are evaluated from the observed loss difference, not inferred from a small p value alone. Several comparisons are exploratory, and their assumptions are discussed explicitly.
+
+RQ1: For each specified temporal coefficient β in a pooled ordinary least squares (OLS) regression of next-month permit value on current permits, calendar sine/cosine, time index, and CMA indicators, H₀: β = 0 and Hₐ: β ≠ 0. Autocorrelation and volatility summaries answer the descriptive parts of RQ1. The study does not perform a formal search for unknown structural break dates.
+
+RQ2: Let d be the history-only elastic net's absolute error minus the macro-augmented elastic net's absolute error for the same target. H₀: E(d) = 0; Hₐ: E(d) ≠ 0. Positive d favors macroeconomic augmentation. Adoption additionally requires at least 5% lower pooled MAE. This hypothesis concerns the two added variables within elastic net; it does not establish their causal effects or evaluate a history-only XGBoost variant.
+
+RQ3: For each fitted candidate, define d as seasonal naive's absolute error minus the candidate's absolute error. H₀: E(d) = 0; Hₐ: E(d) ≠ 0. The practical decision also requires MASE below 1 and an acceptable regional degradation count. A supplementary comparison of XGBoost with random forest tests the same loss-difference hypothesis without changing the model-selection rule.

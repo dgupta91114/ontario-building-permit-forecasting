@@ -1,0 +1,45 @@
+Table 13 shows lower monthly pooled error than seasonal naive in 10 of 12 months. The supplementary interval for its mean advantage excludes zero under the monthly t-test assumptions. Against random forest, the corresponding interval includes zero and p = .439. Therefore, the study supports a practical preference for XGBoost under its rule, not a demonstrated significant advantage over the competing tree model.
+
+Figure 5
+
+Leading Permutation-Importance Features
+
+Note. Original visualization of saved holdout permutation estimates. Higher values indicate more damage to accuracy after an input is shuffled.
+
+Figure 6
+
+Leading Mean Absolute SHAP Attributions
+
+Note. Original plot of archived SHAP summaries. Units are log1p-target contributions; mean absolute attribution conveys magnitude, not direction or causality.
+
+Figures 5 and 6 identify current permits, the rolling mean, and recent lags as the strongest signals. Permutation measures the change in original-dollar MAE; SHAP decomposes the fitted log-scale prediction. Their numerical magnitudes are not interchangeable. The rate's zero permutation importance and nonzero SHAP attribution illustrate that feature use need not imply incremental predictive value. Correlated inputs and permutations across regions can distort rankings. These charts explain fitted behavior and support the history-dominant interpretation without establishing causality.
+
+Table 14
+
+Empirical Coverage and Width of the Separate Interval Model
+
+Note. Nominal level: 90%. These intervals and their point centers come from the 320-row proper fit with 60 calibration rows, not the 380-row headline refit.
+
+The separate interval fit covers all 60 holdout outcomes, compared with the nominal target of 90%. Its pooled half-width before truncation is CAD 304.281 million. Toronto's average interval width is CAD 608.562 million; lower bounds for smaller markets often reach zero. Table 14 demonstrates why coverage alone is insufficient: a very broad interval can contain observations while providing limited help for a precise commitment.
+
+The interval branch was trained on 320 observations and calibrated on 60 later pre-holdout observations. Its own holdout MAE is CAD 51.354 million and MASE is 0.544. These supplementary values identify that branch; the headline MAE of CAD 53.678 million belongs to the 380-row point-model refit. Bounds must remain attached to their own predicted center, rather than being drawn around the headline model's different forecasts.
+
+All 12 observations are covered in each CMA, but there are too few distinct months to establish stable regional calibration. Shared economic conditions, model selection, and tuning reuse also weaken exchangeability. A 100% historical coverage figure is therefore not a probability guarantee for an individual future month. Useful monitoring needs both coverage and width, preferably alongside regional scale and decision requirements.
+
+They are not precise monthly budgets. A pilot should record whether a forecast range is narrow enough to influence a real decision; an interval that is statistically conservative may still have little operational value.
+
+Table 15
+
+Constant-Dollar Sensitivity: Holdout Performance
+
+Note. n = 60 per model; same dates and CMA scope. Monetary errors: millions of constant CAD on the official source basis. Compare models within this table; current/constant monetary errors have different value bases.
+
+Table 15 presents the constant-dollar comparison. That analysis retains the 440-row design and again selects XGBoost, with MASE 0.449 and MAE reduction of approximately 49.6% against its own seasonal-naive benchmark. The macro-augmented elastic net is 3.82% worse than history-only in that analysis. Agreement in the selected family strengthens the conclusion that the main ranking is not unique to current-dollar measurement. Absolute errors across price bases should not be interpreted as a direct improvement comparison.
+
+Across the four questions, regional scale and persistence differ, the macroeconomic ablation misses its practical threshold, tree ensembles improve the tested holdout, and current permit history dominates attribution. These results support an explainable planning workflow, with XGBoost as the preferred evaluated configuration and random forest as a competitive alternative. The literature supplies the methodological justification; the Ontario estimates come from this study's data and saved predictions.
+
+The strongest practical result is a reduction in historical forecast error with transparent regional checks. The weakest operational evidence concerns actual issuance timing, interval usefulness, and measured user benefit. None has been validated by a deployed user trial. Successful implementation therefore depends on more than selecting the smallest error in Table 8: it requires reliable data availability, retained forecast vintages, review of unusual authorizations, and a process for reassessing performance as new months arrive.
+
+The completed implementation is a scripted batch analysis: source acquisition, filtering, feature engineering, model fitting, evaluation, interval construction, attribution, and report generation. It produces versioned files and saved models. It is not a running public API or deployed dashboard. A practical next step is a shadow pilot in which forecasts are issued and archived without automatically triggering procurement, staffing, or policy decisions.
+
+A monthly pilot would begin when the required official releases become available. The data owner would capture release timestamps and revisions, validate source dimensions, and identify the latest information actually available for each forecast. The model owner would generate regional outputs using a versioned specification. An analyst would review unusual values and local project context before publishing an internal scorecard. Subsequent releases would provide the actual values used to evaluate those archived forecasts.

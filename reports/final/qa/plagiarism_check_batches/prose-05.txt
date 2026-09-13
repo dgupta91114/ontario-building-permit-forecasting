@@ -1,0 +1,43 @@
+For target t + 1, seasonal naive uses y(g,t−11), the same calendar month one year earlier. It does not use the 12-month origin lag, which would be one month misaligned. Chronological reference-month construction prevents use of future target values. However, official permits for month t are published later and may subsequently be revised. The backtest is therefore conditional on recorded reference-month data, not an archived real-time information set. Deployment must align forecasts with actual release availability and may require a nowcasting formulation.
+
+Table 5
+
+Chronological Training, Validation, Holdout, and Calibration Windows
+
+Note. All partitions preserve complete five-CMA months. Model parameters are fixed within each evaluation window; lagged inputs advance by origin month.
+
+Table 5 specifies the date partitions. The latest 12 target months form the holdout. Earlier observations provide 76 training months, or 380 rows. Three expanding-window folds begin with 36 months, assess the next 12 months, and advance by 12 months. All five CMA observations for a given target month remain in the same partition.
+
+Grid search minimizes mean validation MAE on the original target scale. Each candidate configuration is fitted only to the training portion of each fold, including preprocessing. The best configuration is then refitted on all 380 pre-holdout rows. Consequently, this is a sequence of one-month predictions, not a 12-step forecast generated from one starting date.
+
+The final holdout supplies the family comparison and acceptance decision as well as the reported performance estimate. Hyperparameters were not fitted to it, but this use introduces selection optimism. A genuinely untouched prospective period is still needed. Random forest's stronger earlier validation MAE and XGBoost's stronger final holdout MAE are both disclosed, because ranking stability matters for operational adoption.
+
+The separate interval procedure reserves the last 12 pre-holdout months for calibration and trains a clone on the preceding 64 months. Its predicted center is retained with its own bounds. Calibration observations also participated in earlier hyperparameter selection, which further limits a strict split-conformal guarantee.
+
+Table 6
+
+Candidate Configurations and Selected Hyperparameters
+
+Note. Selected settings minimize earlier three-fold mean MAE. All fitted models use log1p targets, fold-fitted preprocessing, and original-scale evaluation.
+
+Seasonal naive is an interpretable annual reference requiring no estimated parameters. Elastic net provides a regularized linear predictor on the transformed target. Random forest averages trees, while XGBoost adds a sequence of corrective trees. These families test different complexity and interaction assumptions on the same structured task (Breiman, 2001; Chen & Guestrin, 2016; Zou & Hastie, 2005).
+
+Table 6 documents the search. The grid contains four configurations for each fitted specification and three validation folds, yielding 48 fold fits across two elastic nets and two ensembles, plus final refits. Both tree families use the macro-augmented feature set. No separate neural, autoregressive integrated moving-average, or history-only tree model was evaluated; superiority is limited to the candidates actually tested. The small grids reflect the modest number of distinct months.
+
+The acceptance algorithm orders candidates by pooled MASE and then MAE. It requires MASE < 1, MAE below seasonal naive, and no more than two CMAs with MAE degradation exceeding 10%. Evidence and reproducibility checks accompany release. If none qualifies, seasonal naive remains the control. The rule is transparent, but it still uses holdout outcomes to choose a family. Its prespecification reduces discretion without converting the selected error estimate into an independent external validation.
+
+Let eᵢ = yᵢ − ŷᵢ for an evaluated row. MAE = (1/n)Σ|eᵢ| retains the target's units; root mean squared error (RMSE) = √[(1/n)Σeᵢ²] gives more weight to large misses. These measures are calculated on original permit values, not on log targets. Training errors describe fitted history, while validation and holdout errors measure predictions for later targets.
+
+For each CMA g, the seasonal scaling denominator is s(g) = mean|y(g,u) − y(g,u−12)| over available pairs in the pre-holdout training targets. Pooled MASE = mean[|eᵢ|/s(gᵢ)]. Thus, each row contributes relative to its own CMA's training scale (Hyndman & Koehler, 2006). A holdout seasonal-naive MASE need not equal 1 because its numerator and scaling denominator come from different periods.
+
+Symmetric mean absolute percentage error (sMAPE) is 100 × mean[2|y − ŷ|/(|y| + |ŷ|)]. Weighted absolute percentage error (WAPE) is 100 × Σ|e|/Σ|y|. A small numerical floor prevents division by zero. sMAPE weights relative row errors; WAPE is strongly influenced by higher-value targets. Percentage measures supplement dollar and scaled errors rather than define a single universal winner.
+
+The interval branch uses absolute residuals from 60 calibration rows. With α = .10, the finite-sample quantile level is ceiling[61 × .90]/60 = 55/60. The implementation applies NumPy's higher empirical quantile, giving radius q = CAD 304.281 million. Bounds are max(0, ŷ − q) and ŷ + q. This rule is conservatively rounded and uses a pooled radius. Temporal dependence, reuse of calibration months in tuning, and regional scale differences mean empirical coverage must be reported without an automatic future guarantee (Angelopoulos & Bates, 2023).
+
+The system converts official data into reproducible forecast evidence for RQ1–RQ4. Figure 1 shows the implemented stages and the separate point and interval branches. Solid boxes denote completed analytical components; the dashed box denotes a proposed operational pilot. Arrows indicate data or artifact flow, not causal relationships.
+
+Figure 1
+
+End-to-End Workflow of the Proposed System
+
+Note. Original workflow diagram. Solid = implemented analysis; dashed = proposed pilot; arrows = artifact flow. The two fitting branches produce different point predictions.

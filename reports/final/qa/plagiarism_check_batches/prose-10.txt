@@ -1,0 +1,51 @@
+Bank of Canada. (n.d.). Valet API: How-to guide. https://www.bankofcanada.ca/valet-api-how-to/
+
+Bergmeir, C., Hyndman, R. J., & Koo, B. (2018). A note on the validity of cross-validation for evaluating autoregressive time series prediction. Computational Statistics & Data Analysis, 120, 70–83. https://doi.org/10.1016/j.csda.2017.11.003
+
+Breiman, L. (2001). Random forests. Machine Learning, 45(1), 5–32. https://doi.org/10.1023/A:1010933404324
+
+Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (pp. 785–794). Association for Computing Machinery. https://doi.org/10.1145/2939672.2939785
+
+Cohen, J. (1992). A power primer. Psychological Bulletin, 112(1), 155–159. https://doi.org/10.1037/0033-2909.112.1.155
+
+Diebold, F. X., & Mariano, R. S. (1995). Comparing predictive accuracy. Journal of Business & Economic Statistics, 13(3), 253–263. https://doi.org/10.1080/07350015.1995.10524599
+
+Goh, B. H. (1996). Residential construction demand forecasting using economic indicators: A comparative study of artificial neural networks and multiple regression. Construction Management and Economics, 14(1), 25–34. https://doi.org/10.1080/01446199600000004
+
+Hyndman, R. J., & Koehler, A. B. (2006). Another look at measures of forecast accuracy. International Journal of Forecasting, 22(4), 679–688. https://doi.org/10.1016/j.ijforecast.2006.03.001
+
+Lundberg, S. M., & Lee, S.-I. (2017). A unified approach to interpreting model predictions. In I. Guyon, U. von Luxburg, S. Bengio, H. Wallach, R. Fergus, S. Vishwanathan, & R. Garnett (Eds.), Advances in neural information processing systems (Vol. 30, pp. 4765–4774). Curran Associates. https://proceedings.neurips.cc/paper_files/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html
+
+Newey, W. K., & West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. Econometrica, 55(3), 703–708. https://doi.org/10.2307/1913610
+
+Shmueli, G. (2010). To explain or to predict? Statistical Science, 25(3), 289–310. https://doi.org/10.1214/10-STS330
+
+Statistics Canada. (2026a). Building permits (BPER): Detailed information for July 2026. https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=2802
+
+Statistics Canada. (2026b). Building permits, by type of structure and type of work (Table 34-10-0292-01) [Data set]. https://doi.org/10.25318/3410029201-eng
+
+Statistics Canada. (2026c). Labour force characteristics, monthly, seasonally adjusted and trend-cycle (Table 14-10-0287-01) [Data set]. https://doi.org/10.25318/1410028701-eng
+
+Tashman, L. J. (2000). Out-of-sample tests of forecasting accuracy: An analysis and review. International Journal of Forecasting, 16(4), 437–450. https://doi.org/10.1016/S0169-2070(00)00065-0
+
+Zou, H., & Hastie, T. (2005). Regularization and variable selection via the elastic net. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 67(2), 301–320. https://doi.org/10.1111/j.1467-9868.2005.00503.x
+
+Table A1
+
+Modeling Dataset Fields and Analytical Roles
+
+Note. Derived from the actual feature code and the 23-column processed dataset. Macro predictors are included only in the augmented elastic net and tree models.
+
+Note. The saved modeling dataset has 23 columns. The dictionary groups related lag and calendar columns for compact presentation. Monetary fields are in CAD thousands; report result tables divide those values by 1,000 to show CAD millions. Only the 11 primary numeric fields, two lagged macro fields when specified, and CMA enter fitted models. Raw macro values, geographic identifiers, quality flags, keys, target, and benchmark are retained for derivation or audit, not silently added as predictors.
+
+Table B1
+
+Repository Evidence and Reproduction Guide
+
+Note. All paths are relative to the GitHub repository linked after the title page. Raw archives and fitted binaries are local regeneration inputs; compact data, outputs, and report diagnostics are versioned.
+
+To reproduce the empirical pipeline, install the recorded environment and local package, then run the numbered data, sample-size, EDA, model, explanation, diagnostics, and sensitivity scripts. New downloads may contain revisions, so exact historical reproduction additionally requires matching the original archive hashes. The compact dataset and archived predictions permit metric verification without those national downloads.
+
+To reproduce the final document, run scripts/14_prepare_final_report_evidence.py with the original saved estimators, then scripts/15_generate_final_report.py and export the resulting DOCX to PDF. The report generator can reuse committed diagnostic outputs when estimator binaries are unavailable. Run scripts/16_validate_final_report.py to check the generated PDF and document structure. These commands separate empirical verification, report creation, and submission checks.
+
+All result tables and charts are original computations or visualizations of the identified public-data analysis. Literature summaries are paraphrased with source attribution. Source archives, code, and report changes are versioned independently so that the final submission can be traced to a specific evidence state.

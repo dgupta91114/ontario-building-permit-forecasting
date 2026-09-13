@@ -1,0 +1,63 @@
+Note. Original visualization of Table 8. Dollar and scaled errors provide complementary rankings; all models share the same target observations.
+
+Table 8 and Figure 2 show XGBoost's 53.8% MAE reduction relative to seasonal naive, calculated as 100(116.200 − 53.678)/116.200 using unrounded values. XGBoost also has the lowest RMSE, MASE, and WAPE. Random forest has slightly lower sMAPE, so the selected model does not dominate every criterion. The two tree models' MASE values differ by only about 0.0006; selection should not be described as decisive evidence of universal superiority.
+
+Figure 3
+
+Regional Permit Histories Used as Model Inputs
+
+Note. Original plot from the processed official dataset. KCW = Kitchener-Cambridge-Waterloo. Seasonally adjusted current values, CAD millions; separate y-axis scales.
+
+Figure 3 plots the observed histories used as predictor origins, January 2019–April 2026. Separate vertical scales expose movement in all five regions while preserving their labels and units. Toronto's series occupies a much larger dollar range; several smaller markets show substantial changes relative to their own level. Large observed movements remain part of the forecasting problem rather than being removed to improve accuracy. Table 9 quantifies the scale and volatility differences, and Table 10 evaluates persistence and conditional temporal terms.
+
+Table 9
+
+Descriptive Regional Permit Values
+
+Note. n = 88 origins per CMA, January 2019–April 2026. Mean and SD: CAD millions. SD = standard deviation; KCW = Kitchener-Cambridge-Waterloo.
+
+Table 10
+
+Regional Autocorrelation and Pooled Temporal Tests
+
+Note. ACF = autocorrelation function. Pooled OLS: current permit b = .315, p < .001; time b = 575.298 (CAD thousands/month), p = .007; sine p = .998; cosine p = .708; R² = .923. Nominal HAC tests use three pooled-row lags.
+
+Toronto's mean is approximately 21 times Windsor's, but Hamilton has the largest coefficient of variation. Annual-lag autocorrelation is negative in four CMAs and only weakly positive in Hamilton. This does not support an assumption of uniformly strong annual persistence in already adjusted values.
+
+The pooled OLS regression has R² = .923, reflecting regional level differences as well as current permits. The current-value coefficient is 0.315 (nominal p < .001), and the time coefficient is positive (575.298 thousand CAD per month; p = .007). Neither seasonal term is significant. At α = .05, the nominal tests reject the zero-coefficient nulls for current value and trend, but not for the calendar terms. These are descriptive results with the pooled-HAC limitations described earlier; R² is not holdout predictive accuracy.
+
+Table 11
+
+Incremental Value of Macroeconomic Inputs in Elastic Net
+
+Note. Original frozen comparison: 60 paired CMA-month errors. Positive improvement favors macro augmentation. All formal decisions use nominal α = .05.
+
+Table 11 shows that the macro-augmented elastic net improves holdout MAE by CAD 0.300 million, equivalent to 0.396%. The gain falls well short of the prespecified 5% requirement. The original paired t test gives t(59) = 1.089, p = .280; the Wilcoxon signed-rank p value is .276, and the saved DM-style p value is .256. None rejects equal predictive loss at α = .05.
+
+The supplementary calculation uses one pooled error difference per month. It gives t(11) = 1.118, p = .287, and a 95% interval for mean MAE reduction of CAD −0.291 to 0.891 million. Nine months favor the augmented model, but the average advantage is small relative to uncertainty. Monthly aggregation addresses shared regional timing; residual serial dependence and the short series remain limitations.
+
+This evidence answers RQ2 narrowly: adding these two lagged macroeconomic series to the specified elastic-net history model does not establish practically useful one-month predictive improvement. It does not demonstrate that unemployment or policy rates are economically irrelevant. Their information may already be represented in recent permits, may operate at a different lag, or may be obscured by provincial aggregation and project timing.
+
+The selected XGBoost model still contains both macro features. An elastic-net ablation and weak feature importance do not establish that removing them from XGBoost would preserve its performance. A history-only tree comparison belongs in a new prospective experiment.
+
+Figure 4
+
+XGBoost Point Forecasts and Observed Holdout Values
+
+Note. Original plot of frozen point-model predictions, CAD millions. Target months: June 2025–May 2026. KCW = Kitchener-Cambridge-Waterloo. These are not interval-model centers.
+
+Figure 4 shows the full-pre-holdout XGBoost point model, with a separate scale for each CMA. Its forecasts track regional levels while missing some abrupt monthly movements. The original paired comparison against seasonal naive gives t(59) = 3.170, p = .002; Wilcoxon p = .002. Those nominal results support the practical error reduction, subject to dependence and model-selection limitations.
+
+Table 12
+
+XGBoost Regional Holdout Performance
+
+Note. n = 12 per CMA. KCW = Kitchener-Cambridge-Waterloo. Every CMA improves against the same-target seasonal-naive control.
+
+Table 13
+
+Supplementary Comparison of Monthly Pooled Losses
+
+Note. Gains/intervals: CAD millions. Twelve monthly mean differences; t tests with 11 df. Exploratory: serial dependence is not removed by monthly aggregation.
+
+Table 12 shows that XGBoost reduces MAE in every CMA and exceeds the 10% degradation tolerance in none. Its regional MASE stays below 1, with Kitchener-Cambridge-Waterloo closest to that boundary at 0.924. Toronto accounts for about 42.9% of the selected model's total absolute error, so both scaled and monetary views remain necessary. The nominal regional ANOVA gives F(4, 55) = 12.725, p < .001; unequal scales and dependent months limit a strict inferential interpretation.

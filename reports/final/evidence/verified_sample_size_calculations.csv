@@ -1,0 +1,5 @@
+research_question,method,key_parameters,minimum_n
+RQ1,Correlation / Fisher z,alpha=.05; power=.80; r=.30; two-sided,85
+RQ2,Multiple regression F test,alpha=.05; power=.80; f-squared=.15; tested predictors=10,118
+RQ3,Paired forecast-error t test,alpha=.05; power=.80; paired d=.35; two-sided,67
+RQ4,One-way ANOVA,alpha=.05; power=.80; Cohen f=.25; groups=5,196

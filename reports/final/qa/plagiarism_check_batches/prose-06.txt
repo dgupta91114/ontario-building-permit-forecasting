@@ -1,0 +1,41 @@
+Data ingestion downloads the two Statistics Canada tables and Bank of Canada rate observations. A manifest records endpoints, timestamps, and SHA-256 hashes. National CSV files are filtered in chunks so that only the needed records enter later stages. The report's compact dataset can therefore be inspected independently of the very large national files.
+
+Data preprocessing validates labels, value basis, units, selected geography, and monthly joins. Source flags remain available for review. Feature engineering operates within CMA, derives the next-month target and lagged histories, and checks unique target keys. EDA then produces descriptive summaries, temporal graphics, and regression outputs. No relational database was created: versioned CSV and JSON files serve as the study's storage and access layer.
+
+Model development uses a preprocessing pipeline and transformed-target wrapper for each fitted learner. Chronological grid search selects settings; refitting produces the saved estimators. Evaluation writes predictions for every model on the same 60 targets and derives pooled and regional errors. The model-selection file stores the acceptance outcome, while paired tests provide supporting diagnostics. These outputs answer the model comparison without relying on screenshots or manually copied calculations.
+
+The interval branch clones the selected configuration, fits it before the calibration period, and calculates a shared residual radius. Its point predictions are stored in the same rows as the lower and upper bounds. Explanation uses permutation importance on original inputs and SHAP on the transformed fitted model. Those two explanation scales remain distinct in the captions and interpretation.
+
+Reporting joins the evidence into tables, labeled figures, narrative, and appendices. A validation stage checks frozen hashes and recomputes metrics from saved predictions. The September report diagnostics add training errors and month-level comparisons in a separate evidence directory. Deployment as a live API or dashboard has not occurred. The proposed pilot adds issuance-date checks, an analyst-facing scorecard, and prospective monitoring to the existing batch analysis.
+
+The analytical environment uses Python 3.11 and runs on a central processing unit (CPU); the code does not require a graphics processing unit (GPU). pandas and NumPy support tabular processing and numerical transformations. scikit-learn supplies preprocessing, elastic net, random forest, and grid search. XGBoost supplies boosted trees; SciPy and statsmodels support statistical tests, power calculations, and descriptive regression. Matplotlib generates figures, SHAP provides attribution, and joblib stores fitted estimators.
+
+Configuration in YAML fixes the five CMAs, analysis dates, feature sets, forecast horizon, validation windows, random seed 640, search grids, and acceptance thresholds. The fitted estimators use one worker, and the environment lock records dependency versions. Jupyter notebooks provide staged analytical entry points, while numbered scripts provide a repeatable execution sequence. The final report is generated as an editable Word document and exported to PDF; document rendering is separate from model fitting.
+
+Git tracks the source code, compact dataset, configuration, frozen result tables, figures, and report artifacts. National raw files and fitted model binaries are excluded from ordinary version control because they are generated or large. Their provenance and regeneration steps remain documented. Raw archive hashes establish identity if an original copy is retained; they cannot retrieve an unavailable historical archive from a changing source endpoint.
+
+The recorded August reproducibility report passed its dataset checks and 11 tests. For this final report, official metric values were independently recalculated from stored holdout predictions, saved estimators reproduced those predictions, and training metrics were obtained from those same estimators. The final quality audit records the checks actually run for this release. It does not describe a fresh national download or complete retraining as completed when only report evidence was verified.
+
+Appendix B identifies commands and files needed to reproduce or inspect the analysis. This distinction between reproducibility instructions and executed verification lets an evaluator trace the evidence without assuming that all possible checks were rerun.
+
+Table 7
+
+Training, Cross-Validation, and Holdout Accuracy
+
+Note. Monetary errors: CAD millions. Training n = 380; each CV validation fold n = 60; holdout n = 60. Training errors are resubstitution diagnostics, not independent forecast accuracy.
+
+Table 7 supplies the requested training and test accuracy together with the earlier validation comparison. Training values are resubstitution errors from each estimator fitted on 380 pre-holdout observations. The same estimators reproduce the archived holdout predictions; the report did not fit a new model to obtain these diagnostics. Cross-validation (CV) values average three earlier validation periods, and holdout values use the common final 60 targets.
+
+Random forest has the lowest mean CV MAE at CAD 85.497 million, whereas XGBoost has the lowest holdout MAE at CAD 53.678 million. Thus, the observed ranking depends on the evaluation period. XGBoost's training MAE of CAD 65.078 million is higher than its final holdout MAE. That ordering is possible because error distributions and large-project realizations differ across periods; it does not establish that training data were ignored or that leakage is absent.
+
+The comparison also reveals a substantial validation-to-holdout change for both elastic nets. Its practical implication is that one favorable final period should not be used to promise stable future accuracy. Historical fit, validation, and holdout each answer a different question. A prospective series of recorded forecasts is the appropriate next assessment of ranking and drift.
+
+Table 8
+
+Final Holdout Model Comparison
+
+Note. n = 60 for every model, June 2025–May 2026. MAE/RMSE in CAD millions; MASE unitless. Lower is better. XGBoost is preferred under the stated acceptance rule.
+
+Figure 2
+
+Holdout Error by Model

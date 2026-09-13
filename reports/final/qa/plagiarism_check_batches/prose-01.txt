@@ -1,0 +1,43 @@
+Data Analytics Capstone
+
+Forecasting Ontario Residential Building-Permit Values Using Explainable Time-Series and Machine-Learning Models
+
+Final Report
+
+Debodip Gupta
+
+Walsh College
+
+QM640: Data Analytics Capstone
+
+Dr. Sanhita Karmakar
+
+Summer 2026 Term
+
+September 15, 2026
+
+GitHub repository: github.com/dgupta91114/ontario-building-permit-forecasting
+
+Monthly residential building-permit values help analysts assess likely construction activity. Yet large projects, unequal market sizes, and changing conditions make these values hard to forecast. This study tests whether an explainable model can improve next-month estimates for five Ontario census metropolitan areas. Permit values measure authorized construction intentions, not completed homes or actual spending. The goal is a useful regional planning signal with a clear benchmark and visible uncertainty. The study uses permit and unemployment data from Statistics Canada and the Bank of Canada overnight-rate target. The frozen source window runs from January 2018 through May 2026. It contains 505 regional permit records; lags and the future target leave 440 complete region-month rows. Three expanding time windows tune elastic net, random forest, and extreme gradient boosting against seasonal naive. The final test covers 60 rows from June 2025 through May 2026. The implemented Python workflow uses pandas, scikit-learn, statsmodels, XGBoost, and SHapley Additive exPlanations on a central processing unit. XGBoost achieves mean absolute error of CAD 53.678 million, root mean squared error of CAD 73.485 million, and mean absolute scaled error of 0.571. Its mean absolute error is 53.8% below seasonal naive, with gains in every region. Adding the two lagged macroeconomic inputs to elastic net improves error by only 0.40%, below the required 5%. Recent permit history provides the main signal. A constant-dollar check also selects XGBoost. A separate interval model covers all 60 test outcomes, but its ranges are wide. The contribution is an auditable forecasting process for municipal analysts, suppliers, and workforce planners. A monitored pilot could pair regional forecasts with uncertainty ranges and project review. Deployment and financial gains have not been measured. Only 12 distinct test months, data revisions, release delays, and model selection on the holdout limit generalization. Prospective tests using actual release vintages are needed before routine use.
+
+Residential development creates decisions before a building is completed: municipal teams review expected workloads, suppliers consider material availability, and employers assess capacity. A permit-value series can inform these discussions because authorization occurs early in the construction process. However, approval does not establish when work starts, whether the full project proceeds, or how many dwellings become available. Statistics Canada distinguishes permit information from subsequent construction activity; this report maintains that distinction throughout (Statistics Canada, 2026a).
+
+The study setting comprises Toronto, Hamilton, Kitchener-Cambridge-Waterloo, London, and Windsor. These census metropolitan areas (CMAs) provide five related but differently scaled monthly series. Toronto's typical authorized value is much larger than the other markets, so a forecast judged only by pooled dollar error may primarily reflect Toronto. A useful regional system must report both the total error burden and performance relative to each CMA's historical variation.
+
+The practical difficulty is that permit values combine persistent activity with abrupt project timing. Recent levels may be informative, yet a major authorization can create a movement that a smooth extrapolation misses. Provincial unemployment and the overnight-rate target are plausible contextual predictors, but their incremental information must be established after accounting for permit history. A relationship that matters economically need not improve a forecast at the particular horizon and aggregation used here.
+
+This capstone addresses that difficulty as a prediction problem. It compares a transparent historical control with regularized regression and tree ensembles, then evaluates regional reliability and model attribution. The workflow treats interpretability, reproducibility, and uncertainty as parts of the deliverable. Predictive usefulness is assessed on later observations; a high explanatory fit within historical data is insufficient evidence of future accuracy (Shmueli, 2010).
+
+The objective is to predict Y, next-month seasonally adjusted residential building-permit value for each of five Ontario CMAs, using X, current and lagged permits, rolling summaries, calendar and CMA indicators, lagged Ontario unemployment, and the overnight-rate target, within the January 2018–May 2026 source window. Success requires lower holdout mean absolute error (MAE) than seasonal naive, pooled mean absolute scaled error (MASE) below 1, and no degradation exceeding 10% in three or more CMAs.
+
+The study describes regional temporal structure, measures the incremental predictive value of two macroeconomic variables, compares model families, and explains the preferred model's behavior. It uses quantitative secondary data and observational comparisons.
+
+RQ1: What trend, seasonal, persistence, and volatility patterns characterize monthly residential building-permit values across the five CMAs?
+
+RQ2: Do lagged Ontario unemployment and the Bank of Canada overnight-rate target improve forecast accuracy beyond permit history, calendar information, and CMA effects?
+
+RQ3: Which candidate produces the most accurate and stable one-month-ahead forecasts across the evaluated time periods and regions?
+
+RQ4: Which inputs contribute most to the preferred model's predictions, and how does forecast reliability differ across CMAs?
+
+Each question has a distinct evidence requirement. RQ1 uses exploratory summaries and a descriptive regression; RQ2 uses matched feature-set comparisons; RQ3 uses chronological validation and common-target errors; RQ4 combines attribution, regional errors, and interval coverage. Formal hypotheses and their evaluation samples appear in Materials and Method, preventing the full dataset size from being mistaken for the sample available to every test.

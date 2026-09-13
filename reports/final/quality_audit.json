@@ -1,0 +1,447 @@
+{
+  "checked_on": "2026-09-13",
+  "pdf": "QM640_Capstone_Final_Report_Debodip_Gupta.pdf",
+  "pdf_sha256": "210647d09331a763371e544e0dac14b446a7cd1c1ce585451b0ff6a784bda20d",
+  "pdf_pages": 40,
+  "abstract_words": 305,
+  "pdf_extracted_words": 10044,
+  "tables": 18,
+  "figures": 6,
+  "references": 17,
+  "missing_required_headings": [],
+  "template_prompts": [],
+  "blank_pages": [],
+  "missing_page_numbers": [],
+  "out_of_bounds_words": [],
+  "missing_caption_cross_references": [],
+  "caption_checks": [
+    {
+      "label": "Table 1",
+      "title": "Literature Relevance Matrix: Domain and Evaluation",
+      "planned_page": 8,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 2",
+      "title": "Literature Relevance Matrix: Models, Interpretation, and Uncertainty",
+      "planned_page": 9,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 3",
+      "title": "Official Data Sources and Frozen Analytical Scope",
+      "planned_page": 10,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 4",
+      "title": "Planned Sample Sizes and the Samples Actually Evaluated",
+      "planned_page": 13,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 5",
+      "title": "Chronological Training, Validation, Holdout, and Calibration Windows",
+      "planned_page": 16,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 6",
+      "title": "Candidate Configurations and Selected Hyperparameters",
+      "planned_page": 17,
+      "on_expected_page": true
+    },
+    {
+      "label": "Figure 1",
+      "title": "End-to-End Workflow of the Proposed System",
+      "planned_page": 19,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 7",
+      "title": "Training, Cross-Validation, and Holdout Accuracy",
+      "planned_page": 22,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 8",
+      "title": "Final Holdout Model Comparison",
+      "planned_page": 23,
+      "on_expected_page": true
+    },
+    {
+      "label": "Figure 2",
+      "title": "Holdout Error by Model",
+      "planned_page": 23,
+      "on_expected_page": true
+    },
+    {
+      "label": "Figure 3",
+      "title": "Regional Permit Histories Used as Model Inputs",
+      "planned_page": 24,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 9",
+      "title": "Descriptive Regional Permit Values",
+      "planned_page": 25,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 10",
+      "title": "Regional Autocorrelation and Pooled Temporal Tests",
+      "planned_page": 25,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 11",
+      "title": "Incremental Value of Macroeconomic Inputs in Elastic Net",
+      "planned_page": 26,
+      "on_expected_page": true
+    },
+    {
+      "label": "Figure 4",
+      "title": "XGBoost Point Forecasts and Observed Holdout Values",
+      "planned_page": 27,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 12",
+      "title": "XGBoost Regional Holdout Performance",
+      "planned_page": 28,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 13",
+      "title": "Supplementary Comparison of Monthly Pooled Losses",
+      "planned_page": 28,
+      "on_expected_page": true
+    },
+    {
+      "label": "Figure 5",
+      "title": "Leading Permutation-Importance Features",
+      "planned_page": 29,
+      "on_expected_page": true
+    },
+    {
+      "label": "Figure 6",
+      "title": "Leading Mean Absolute SHAP Attributions",
+      "planned_page": 29,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 14",
+      "title": "Empirical Coverage and Width of the Separate Interval Model",
+      "planned_page": 30,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 15",
+      "title": "Constant-Dollar Sensitivity: Holdout Performance",
+      "planned_page": 31,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table 16",
+      "title": "Retrospective Scorecard Example: KCW, June 2025",
+      "planned_page": 33,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table A1",
+      "title": "Modeling Dataset Fields and Analytical Roles",
+      "planned_page": 39,
+      "on_expected_page": true
+    },
+    {
+      "label": "Table B1",
+      "title": "Repository Evidence and Reproduction Guide",
+      "planned_page": 40,
+      "on_expected_page": true
+    }
+  ],
+  "missing_reference_links": [],
+  "uncited_reference_authors": [],
+  "format": {
+    "a4_page": true,
+    "one_inch_margins": true,
+    "times_new_roman_12pt_body": true,
+    "body_leading_points": 24,
+    "body_font_points": 12
+  },
+  "frozen_evidence": [
+    {
+      "path": "config/config.yaml",
+      "unchanged": true
+    },
+    {
+      "path": "data/processed/modeling_dataset.csv",
+      "unchanged": true
+    },
+    {
+      "path": "data/processed/feature_audit.json",
+      "unchanged": true
+    },
+    {
+      "path": "data/interim/cleaning_audit.json",
+      "unchanged": true
+    },
+    {
+      "path": "outputs/tables/rq3_model_metrics.csv",
+      "unchanged": true
+    },
+    {
+      "path": "outputs/tables/model_selection.json",
+      "unchanged": true
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "words": 34,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 2,
+      "words": 310,
+      "images": 6,
+      "links": 1
+    },
+    {
+      "page": 3,
+      "words": 280,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 4,
+      "words": 256,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 5,
+      "words": 291,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 6,
+      "words": 270,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 7,
+      "words": 306,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 8,
+      "words": 317,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 9,
+      "words": 286,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 10,
+      "words": 282,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 11,
+      "words": 311,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 12,
+      "words": 298,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 13,
+      "words": 321,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 14,
+      "words": 313,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 15,
+      "words": 309,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 16,
+      "words": 328,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 17,
+      "words": 349,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 18,
+      "words": 264,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 19,
+      "words": 86,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 20,
+      "words": 310,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 21,
+      "words": 315,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 22,
+      "words": 282,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 23,
+      "words": 178,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 24,
+      "words": 115,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 25,
+      "words": 257,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 26,
+      "words": 296,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 27,
+      "words": 96,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 28,
+      "words": 256,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 29,
+      "words": 136,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 30,
+      "words": 295,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 31,
+      "words": 291,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 32,
+      "words": 267,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 33,
+      "words": 276,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 34,
+      "words": 286,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 35,
+      "words": 249,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 36,
+      "words": 119,
+      "images": 6,
+      "links": 7
+    },
+    {
+      "page": 37,
+      "words": 152,
+      "images": 6,
+      "links": 7
+    },
+    {
+      "page": 38,
+      "words": 98,
+      "images": 6,
+      "links": 7
+    },
+    {
+      "page": 39,
+      "words": 303,
+      "images": 6,
+      "links": 0
+    },
+    {
+      "page": 40,
+      "words": 256,
+      "images": 6,
+      "links": 0
+    }
+  ],
+  "originality": {
+    "local_duplicate_prose_sentences": [],
+    "quotes_over_25_words": [],
+    "external_similarity_percentage": null,
+    "external_plagiarism_check": "Not completed. A free web checker was inspected, but no full-document scan or percentage was obtained. Local checks and web phrase spot-checks do not verify the 7% requirement."
+  },
+  "document_and_evidence_checks_passed": true
+}

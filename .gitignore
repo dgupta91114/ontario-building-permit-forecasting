@@ -1,6 +1,9 @@
 .venv/
 .venv-final/
 .mplconfig/
+.uv-report-cache/
+reports/final/.lo-profile/
+reports/final/qa/previews/
 __pycache__/
 *.py[cod]
 *.egg-info/

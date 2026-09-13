@@ -1,0 +1,104 @@
+[
+  [
+    "Angelopoulos, A. N., & Bates, S. (2023). Conformal prediction: A gentle introduction. ",
+    "Foundations and Trends in Machine Learning, 16",
+    "(4), 494\u2013591. ",
+    "https://doi.org/10.1561/2200000101"
+  ],
+  [
+    "Bank of Canada. (n.d.). ",
+    "Valet API: How-to guide",
+    ". ",
+    "https://www.bankofcanada.ca/valet-api-how-to/"
+  ],
+  [
+    "Bergmeir, C., Hyndman, R. J., & Koo, B. (2018). A note on the validity of cross-validation for evaluating autoregressive time series prediction. ",
+    "Computational Statistics & Data Analysis, 120",
+    ", 70\u201383. ",
+    "https://doi.org/10.1016/j.csda.2017.11.003"
+  ],
+  [
+    "Breiman, L. (2001). Random forests. ",
+    "Machine Learning, 45",
+    "(1), 5\u201332. ",
+    "https://doi.org/10.1023/A:1010933404324"
+  ],
+  [
+    "Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In ",
+    "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+    " (pp. 785\u2013794). Association for Computing Machinery. ",
+    "https://doi.org/10.1145/2939672.2939785"
+  ],
+  [
+    "Cohen, J. (1992). A power primer. ",
+    "Psychological Bulletin, 112",
+    "(1), 155\u2013159. ",
+    "https://doi.org/10.1037/0033-2909.112.1.155"
+  ],
+  [
+    "Diebold, F. X., & Mariano, R. S. (1995). Comparing predictive accuracy. ",
+    "Journal of Business & Economic Statistics, 13",
+    "(3), 253\u2013263. ",
+    "https://doi.org/10.1080/07350015.1995.10524599"
+  ],
+  [
+    "Goh, B. H. (1996). Residential construction demand forecasting using economic indicators: A comparative study of artificial neural networks and multiple regression. ",
+    "Construction Management and Economics, 14",
+    "(1), 25\u201334. ",
+    "https://doi.org/10.1080/01446199600000004"
+  ],
+  [
+    "Hyndman, R. J., & Koehler, A. B. (2006). Another look at measures of forecast accuracy. ",
+    "International Journal of Forecasting, 22",
+    "(4), 679\u2013688. ",
+    "https://doi.org/10.1016/j.ijforecast.2006.03.001"
+  ],
+  [
+    "Lundberg, S. M., & Lee, S.-I. (2017). A unified approach to interpreting model predictions. In I. Guyon, U. von Luxburg, S. Bengio, H. Wallach, R. Fergus, S. Vishwanathan, & R. Garnett (Eds.), ",
+    "Advances in neural information processing systems",
+    " (Vol. 30, pp. 4765\u20134774). Curran Associates. ",
+    "https://proceedings.neurips.cc/paper_files/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html"
+  ],
+  [
+    "Newey, W. K., & West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. ",
+    "Econometrica, 55",
+    "(3), 703\u2013708. ",
+    "https://doi.org/10.2307/1913610"
+  ],
+  [
+    "Shmueli, G. (2010). To explain or to predict? ",
+    "Statistical Science, 25",
+    "(3), 289\u2013310. ",
+    "https://doi.org/10.1214/10-STS330"
+  ],
+  [
+    "Statistics Canada. (2026a). ",
+    "Building permits (BPER): Detailed information for July 2026",
+    ". ",
+    "https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=2802"
+  ],
+  [
+    "Statistics Canada. (2026b). ",
+    "Building permits, by type of structure and type of work",
+    " (Table 34-10-0292-01) [Data set]. ",
+    "https://doi.org/10.25318/3410029201-eng"
+  ],
+  [
+    "Statistics Canada. (2026c). ",
+    "Labour force characteristics, monthly, seasonally adjusted and trend-cycle",
+    " (Table 14-10-0287-01) [Data set]. ",
+    "https://doi.org/10.25318/1410028701-eng"
+  ],
+  [
+    "Tashman, L. J. (2000). Out-of-sample tests of forecasting accuracy: An analysis and review. ",
+    "International Journal of Forecasting, 16",
+    "(4), 437\u2013450. ",
+    "https://doi.org/10.1016/S0169-2070(00)00065-0"
+  ],
+  [
+    "Zou, H., & Hastie, T. (2005). Regularization and variable selection via the elastic net. ",
+    "Journal of the Royal Statistical Society: Series B (Statistical Methodology), 67",
+    "(2), 301\u2013320. ",
+    "https://doi.org/10.1111/j.1467-9868.2005.00503.x"
+  ]
+]

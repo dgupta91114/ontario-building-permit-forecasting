@@ -1,4 +1,6 @@
-> **Official-analysis status:** The current processed dataset, tables, figures, and final-report draft were generated from frozen official Statistics Canada and Bank of Canada sources through May 2026. Earlier synthetic software-validation outputs are isolated under `data/demo/` and `outputs/demo_dry_run/` and are not used in the empirical report.
+> **Final-report status (September 13, 2026):** The [40-page final report PDF](reports/final/QM640_Capstone_Final_Report_Debodip_Gupta.pdf) and [editable DOCX](reports/final/QM640_Capstone_Final_Report_Debodip_Gupta.docx) are complete for the Summer 2026 submission. See the [rubric map, validation, and submission checklist](reports/final/README.md). The assignment's external plagiarism check remains outstanding; no similarity percentage is claimed.
+>
+> **Official-analysis status:** The current processed dataset, tables, figures, and report use frozen official Statistics Canada and Bank of Canada sources through May 2026. Earlier synthetic software-validation outputs are isolated under `data/demo/` and `outputs/demo_dry_run/` and are not used in the empirical report.
 
 # Forecasting Ontario Residential Building-Permit Values
 

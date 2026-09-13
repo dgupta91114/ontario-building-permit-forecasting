@@ -1,0 +1,39 @@
+The initial integration can use the existing CSV outputs in a spreadsheet or business-intelligence tool. Required fields include CMA, forecast issuance date, target reference month, data-vintage identifier, model version, point estimate, uncertainty bounds from the matching interval model, benchmark estimate, and recent regional performance. Release-time metadata must be added during the pilot because the historical analysis primarily records reference months.
+
+A scheduled run should stop if required dates are missing, values have incompatible units, a new geography appears, or key uniqueness checks fail. Successful runs should retain the inputs and outputs needed to reconstruct what the analyst saw. Revisions must create new vintages rather than silently replacing an issued forecast's evidence.
+
+The existing seasonal-naive control should remain visible in every evaluation cycle.
+
+An analyst would select a CMA and target month, review the point and range together, compare the seasonal-naive reference, and inspect recent regional error. An annotation should identify unusual project context and whether the data were revised. The proposed interface should distinguish forecast issue date from target reference month so that a historical backtest is not mistaken for a current forecast.
+
+Expected benefits are consistent preparation, clearer regional comparisons, and an explicit uncertainty discussion. A pilot should measure preparation time, forecast availability, analyst usage, whether the information changed a decision, and prospective error and coverage. Financial savings require a separate evaluation with relevant costs and a credible comparison workflow; they cannot be derived by multiplying budgets by the 53.8% accuracy improvement.
+
+Table 16
+
+Retrospective Scorecard Example: KCW, June 2025
+
+Note. All three forecast fields are from the same interval-model record. KCW = Kitchener-Cambridge-Waterloo. No live forecast or measured user trial is represented.
+
+Table 16 uses a recorded historical output to illustrate the proposed scorecard. For Kitchener-Cambridge-Waterloo, the interval-model estimate for June 2025 was about CAD 99.3 million, and the observed value was CAD 159.8 million. The range reaches from zero to approximately CAD 403.6 million. A supplier could use this as one scenario input alongside its confirmed orders, while an analyst investigates project timing. This is a retrospective demonstration of output interpretation, not evidence that a customer used the system or achieved an operational gain.
+
+The geographical scope is five Ontario CMAs, with only 88 analytic target months per region. The panel includes pandemic disruption and relatively few annual cycles. Findings may not generalize to other regions, non-residential permits, different horizons, or housing completions. An aggregate regional association cannot be translated into a project-level or household-level causal claim.
+
+The series are revised official estimates, and one London value is flagged for caution. More fundamentally, reference-month order is not release-date availability. Because month-t permits may be published after month t + 1 begins or ends, this experiment cannot be advertised as a fully real-time next-calendar-month forecast. A source-vintage backtest could produce different errors and may require nowcasting or a later horizon.
+
+The holdout contains 60 region-month rows but only 12 distinct months. Planned evaluation sample sizes for RQ3 and RQ4 are not met. Shared macroeconomic series, regional shocks, and serial dependence make independent-row p values optimistic or otherwise unreliable. The original pooled HAC and DM-style implementations do not establish a complete panel covariance correction. Supplementary monthly comparisons remain small-sample diagnostics, and no multiple-testing adjustment was prespecified.
+
+Model-family selection and reported performance use the same holdout. The apparent winner may consequently have benefited from that period's noise. The log-target inverse transform may introduce original-scale bias, and no broader model-family search was performed. Correlated-feature attributions can be unstable even when predictions are useful.
+
+Finally, broad pooled intervals limit decision precision and do not establish prospective conditional coverage. Calibration months participated in tuning, and temporal exchangeability is unverified. The defensible conclusion is that the tested configuration improves this historical benchmark comparison and merits further evaluation, while real-time usefulness and user impact remain open empirical questions.
+
+The highest-priority improvement is an archived release-vintage evaluation. Each forecast should use only data actually published by its issue timestamp, retain any later revisions separately, and specify whether the task is forecasting or nowcasting.
+
+Next, collect a longer sequence of prospective months before retuning. A new evaluation design should separate family selection from final assessment and choose power assumptions for the actual loss-comparison method. Dependence-aware resampling or panel covariance methods should operate on genuine month blocks, with uncertainty about their small-sample performance acknowledged. Regional scale should also be considered before interpreting omnibus differences in absolute dollar error.
+
+Additional controlled experiments could compare history-only XGBoost, local unemployment, mortgage-rate measures, construction-cost indicators, and alternative forecast horizons. Region-adaptive intervals and rolling calibration may improve decision precision, but require prospective checks of coverage and width.
+
+Expansion to additional Ontario or Canadian CMAs would test transportability and provide more cross-sectional variety. A shadow pilot can then assess whether the system improves preparation efficiency and decisions without assuming that lower forecast error automatically yields savings.
+
+This study implements an auditable public-data workflow for next-reference-month residential permit values in five Ontario CMAs. XGBoost reduces holdout MAE by 53.8% against seasonal naive and meets the stated regional acceptance rule; macro augmentation of elastic net does not establish practical value. Recent permit history supplies the main predictive signal, and constant-dollar sensitivity supports the selected family. The appropriate next application is a monitored, release-aware planning pilot with uncertainty, benchmark comparisons, and prospective validation.
+
+Angelopoulos, A. N., & Bates, S. (2023). Conformal prediction: A gentle introduction. Foundations and Trends in Machine Learning, 16(4), 494–591. https://doi.org/10.1561/2200000101
